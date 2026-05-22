@@ -32,6 +32,23 @@ app.get('/', (req, res) => {
 // QUIZ API
 // ============================
 
+app.get('/api/buzzer-files', (req, res) => {
+    const dir = path.join(__dirname, 'public', 'buzzer');
+
+    if (!fs.existsSync(dir)) {
+        return res.json([]);
+    }
+
+    const files = fs.readdirSync(dir)
+        .filter(f => f.endsWith('.json'))
+        .map(f => f.replace('.json', ''));
+
+    res.json(files);
+});
+
+
+
+
 app.get('/api/quizzes', (req, res) => {
     const dir = path.join(__dirname, 'public', 'quizliste');
 
