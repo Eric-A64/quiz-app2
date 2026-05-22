@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BUZZ Admin - Quiz interactif</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 900px;
+        }
+
+        video,
+        img {
+            max-width: 300px;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button,
+        select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        #qrcode {
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            width: 180px;
+            height: 180px;
+        }
+
+        #qrcode canvas,
+        #qrcode svg {
+            width: 180px !important;
+            height: 180px !important;
+            display: block;
+        }
+
+        #scoreboard {
+            margin-top: 30px;
+            padding: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: #f0f8ff;
+        }
+
+        #scoreboard table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #scoreboard th,
+        #scoreboard td {
+            border: 1px solid #007BFF;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #scoreboard th {
+            background-color: #8b2cbf;
+            color: white;
+        }
+
+        /* Section score flottante */
+        #scoreContainer {
+            background-color: #FD9EFF;
+            border-radius: 20px;
+            max-width: 400px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 400px;
+            z-index: 1000;
+box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        #scoreboard td:first-child {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #scoreboard td:nth-child(2) {
+            font-size: 20px;
+        }
+
+        #scoreboard td:nth-child(3) {
+            font-size: 20px;
+        }
+
+        #mainContainer {
+            display: flex;
+            gap: 20px;
+            max-width: 500px;
+            align-items: flex-start;
+        }
+
+        #questionsContainer {
+    flex: 2;
+
+    margin-top: 180px;
+
+}
+
+        #podiumContainer {
+            margin-top: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        #headerRow {
+
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    width: 510px;
+
+    z-index: 1000;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    background-color: #FFA8F2;
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+        @keyframes blink {
+
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+
+/* PREVIEW FLOTTANT */
+#previewContainer {
+    background-color: #FFA8F2;
+    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    right: 450px; /* juste à gauche du score */
+    width: 500px;
+    min-height: 320px;
+    z-index: 999;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#previewContainer h3 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+#livePreview {
+    background: #111;
+    min-height: 260px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#livePreview img,
+#livePreview video {
+    max-width: 100%;
+    max-height: 280px;
+    border-radius: 10px;
+}
+
+#livePreview audio {
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+
+<div id="headerRow">
+
+    <center><div id="logoContainer">
+        <img src="Mis-ROND90.png" alt="Logo" />
+<h3>BUZ-ADMIN</h3></center>  
+
+
+    <div id="quizDiv">
+
+        <select id="quizSelect"></select>
+
+        <button id="loadSelectedQuiz"
+            style="background-color:#AFFF03; color:black;">LOAD</button>
+
+
+
+
+<div style="margin-top:10px; width:200px; background:#ddd; border-radius:8px; overflow:hidden;">
+
+
+    <div id="preloadBar"
+         style="height:10px; width:0%; background:#78F07E; transition:width 0.2s;">
+    </div>
+</div>
+
+
+<div id="preloadStatus" style="font-size:12px; margin-top:5px;">
+    QUIZ NOT LOADED
+</div>
+
+
+
+  </div>
+</div>
+
+
+<div id="previewContainer">
+<h3>🎬 PREVIEW SCREEN</h3>
+<div id="livePreview"></div>
+
+
+
+<center><button id="quizFlowBtn"
+    style="
+        background:#8b2cbf;
+        color:white;
+        font-size:18px;
+        padding:12px 20px;
+        font-weight:bold;
+    ">
+    ▶ START QUIZ
+</button>
+
+<button id="resetQuizBtn"
+    style="
+        background:#444;
+        color:white;
+        font-size:14px;
+        padding:10px 15px;
+        margin-left:10px;
+    ">
+    🔄 RESET QUIZ
+</button>
+
+
+<div id="podiumButtonDiv">
+
+        <button id="endQuizBtn"
+    style="
+        background-color:#f44336;
+        color:white;
+        border-radius:50%;
+        width:80px;
+        height:80px;
+        border:none;
+    ">
+    🏆 PODIUM OFF
+</button>
+
+<h3>URL pour les joueurs :</h3>
+<p id="playerURL"></p>
+<div id="qrcode"></div>
+</center>
+
+    </div>
+    </div>
+
+
+</div>
+
+
+<div id="questionCounter"
+     style="margin-top:10px; font-weight:bold;">
+    QUESTION : 0
+</div>
+
+
+<div id="mainContainer">
+
+    <div id="questionsContainer">
+
+        <h2>BLIND-TEST</h2>
+
+        <div id="questionList"></div>
+
+        <hr>
+
+        
+
+    <div id="scoreContainer">
+
+        <div id="qrButtonDiv">
+
+            <center>
+                <button style="background-color:#8b2cbf; color:white;">
+                    QR CODE + WAITING ROOM
+                </button>
+            </center>
+
+        </div>
+
+        <center>
+            <h2>Validation Joueurs (5 MAX)</h2>
+        </center>
+
+        <div id="buzzedPlayersList"></div>
+
+        <h2 class="text-center">CLASSEMENT</h2>
+
+        <div id="scoreScreenButtonDiv">
+
+            <center>
+                <button id="scoreScreenBtn"
+                    style="background-color:#8b2cbf; color:white;">
+                    TOP-LIST
+                </button>
+            </center>
+
+        </div>
+
+        <div>
+            <center>
+                👥 <b>Connectés</b> :
+                <span id="playerCount">0</span>
+            </center>
+        </div>
+
+        <center>
+<button onclick="resetLobby()">Reset Lobby</button>
+            <button id="resetScoresBtn"
+                style="background-color:#FF2900; color:white;">
+                🔄 <b>RESET SCORES</b>
+            </button>
+
+        </center>
+
+        <div id="scoreboard">
+            <center>
+                <p>Aucun Score en attente.</p>
+            </center>
+        </div>
+
+        <hr>
+
+        <div id="podiumContainer">
+
+            <h2 class="text-center">🏆 Podium Final</h2>
+
+            <div id="podium"
+                style="
+                    font-size:1.2rem;
+                    font-weight:bold;
+                    color:#b8860b;
+                ">
+
+                <p>
+                    <center>Podium en attente</center>
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+    </div>
+
+</div>
+
+<script src="/libs/qrcode.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+window.latestScores = {};
+
+let playerUrl = '';
+let buzzedPlayers = [];
+let selectedQuestionIndex = null;
+let loadedQuestions = null;
+let preloadedMedia = {};
+let currentTheme = null;
+let qrScreenVisible = false;
+let podiumVisible = false;
+
+let quizReady = false;
+let preloadProgress = 0;
+let preloadTotal = 0;
+
+let syncOffset = 300;
+
+let currentQuestionIndex = -1;
+let showingAnswer = false;
+
+let socket;
+
+document.addEventListener('DOMContentLoaded', () => {
+console.log("🟢 DOM READY");
+
+
+
+
+    socket = io(window.location.origin);
+socket.off('buzzQuestionsList');
+
+
+    const quizSelect = document.getElementById('quizSelect');
+    const loadSelectedQuiz = document.getElementById('loadSelectedQuiz');
+console.log("🟡 LOAD BUTTON FOUND:", loadSelectedQuiz);
+
+
+
+
+
+    const questionList = document.getElementById('questionList');
+    const scoreboard = document.getElementById('scoreboard');
+    const resetScoresBtn = document.getElementById('resetScoresBtn');
+    const endQuizBtn = document.getElementById('endQuizBtn');
+    const podiumDiv = document.getElementById('podium');
+    const qrButton = document.querySelector('#qrButtonDiv button');
+    const scoreScreenBtn = document.getElementById('scoreScreenBtn');
+
+const resetQuizBtn = document.getElementById('resetQuizBtn');
+
+let scoreScreenVisible = false;
+
+scoreScreenBtn.textContent = 'TOP-LIST OFF';
+scoreScreenBtn.style.backgroundColor = '#8b2cbf';
+scoreScreenBtn.style.color = 'white';
+
+scoreScreenBtn.addEventListener('click', () => {
+
+    scoreScreenVisible = !scoreScreenVisible;
+
+    socket.emit(
+        scoreScreenVisible ? 'showScoreScreen' : 'hideScoreScreen',
+        scoreScreenVisible ? (window.latestScores || {}) : undefined
+    );
+
+    // 🔥 IMPORTANT : STOP MEDIA UNIQUEMENT VIA LE SCREEN
+    if (!scoreScreenVisible) {
+        socket.emit('stopMedia');
+    }
+
+    scoreScreenBtn.textContent = scoreScreenVisible
+        ? 'TOP-LIST ON'
+        : 'TOP-LIST OFF';
+
+    scoreScreenBtn.style.backgroundColor = scoreScreenVisible
+        ? '#78F07E'
+        : '#8b2cbf';
+
+    scoreScreenBtn.style.color = scoreScreenVisible
+        ? 'black'
+        : 'white';
+});
+
+
+
+const questionCounter =
+    document.getElementById('questionCounter');
+
+
+
+
+
+
+quizFlowBtn.addEventListener('click', () => {
+
+    if (!loadedQuestions?.length) return;
+
+    // =====================
+    // QUESTION
+    // =====================
+    if (!showingAnswer) {
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex >= loadedQuestions.length) {
+
+            currentQuestionIndex = 0;
+        }
+
+        sendQuestionAndMedia(currentQuestionIndex);
+
+        showingAnswer = true;
+
+        questionCounter.textContent =
+            `QUESTION : ${currentQuestionIndex + 1}`;
+
+        quizFlowBtn.textContent =
+            "✅ SHOW ANSWER";
+    }
+
+    // =====================
+    // REPONSE
+    // =====================
+    else {
+
+        validateAnswer2(currentQuestionIndex);
+
+        showingAnswer = false;
+
+        quizFlowBtn.textContent =
+            "▶ NEXT QUESTION";
+    }
+});
+
+
+socket.emit('stopQuizFlow');
+
+
+
+
+document.addEventListener('keydown', (e) => {
+
+    // ENTER
+    if (e.key === 'Enter') {
+
+        e.preventDefault();
+
+        quizFlowBtn.click();
+    }
+
+    // FLECHE BAS
+    if (e.key === 'ArrowDown') {
+
+        e.preventDefault();
+
+        quizFlowBtn.click();
+    }
+
+});
+
+
+resetQuizBtn.addEventListener('click', () => {
+
+    console.log("🟢 RESET QUIZ CLICK DETECTED");
+
+    const ok = confirm(
+        'Voulez-vous vraiment reset le quiz et revenir à la première question ?'
+    );
+
+    if (!ok) return;
+
+    if (!loadedQuestions || loadedQuestions.length === 0) return;
+
+    // =========================
+    // RESET LOCAL STATE
+    // =========================
+    currentQuestionIndex = 0;
+    showingAnswer = false;
+
+    questionCounter.textContent = "QUESTION : 1";
+    quizFlowBtn.textContent = "▶ START QUIZ";
+
+    // =========================
+    // STOP EVERYTHING
+    // =========================
+    stopAllMedia();
+    socket.emit('stopMedia');
+
+    socket.emit('resetBuzz'); // important vu ton log serveur
+
+    // 🔥 STOP FLOW SERVER (MANQUAIT)
+    socket.emit('stopQuizFlow');
+
+    // =========================
+    // FORCE QUESTION 1
+    // =========================
+    setTimeout(() => {
+
+        sendQuestionAndMedia(0);
+
+    }, 150); // petit delay pour écraser le flow en cours
+});
+
+
+
+window.resetLobby = function () {
+    socket.emit("admin:resetLobby");
+};
+
+
+
+
+    function getExecuteTime() {
+
+        return Date.now() + syncOffset;
+
+    }
+
+    function runAt(time, fn) {
+
+        const delay = time - Date.now();
+
+        if (delay <= 0) {
+
+            fn();
+
+        } else {
+
+            setTimeout(fn, delay);
+
+        }
+
+    }
+
+
+
+
+
+
+function renderScores(scores) {
+
+    window.latestScores = scores;
+
+    if (!scores || Object.keys(scores).length === 0) {
+        scoreboard.innerHTML = "<p>Aucun score pour le moment.</p>";
+        return;
+    }
+
+    const sorted = Object.entries(scores)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+
+    const table = document.createElement('table');
+    const tbody = document.createElement('tbody');
+
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>🏆</th>
+                <th>JOUEURS</th>
+                <th>SCORES</th>
+            </tr>
+        </thead>
+    `;
+
+    sorted.forEach(([player, score], i) => {
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+            <td>${i + 1}</td>
+            <td>${player}</td>
+            <td>${score}</td>
+        `;
+
+        tbody.appendChild(row);
+    });
+
+    table.appendChild(tbody);
+
+    scoreboard.innerHTML = '';
+    scoreboard.appendChild(table);
+}
+
+
+
+
+    function renderQR(url) {
+
+        const container = document.getElementById("qrcode");
+
+        container.innerHTML = "";
+
+        new QRCode(container, {
+
+            text: url,
+            width: 180,
+            height: 180
+
+        });
+
+        console.log("QR généré :", url);
+
+    }
+
+playerUrl = `${window.location.origin}/player.html`;
+
+    document.getElementById('playerURL').textContent =
+        playerUrl;
+
+    renderQR(playerUrl);
+
+
+
+
+
+    
+
+
+
+
+    resetScoresBtn.addEventListener('click', () => {
+
+        const ok = confirm(
+            'Voulez-vous vraiment remettre tous les scores à zéro ?'
+        );
+
+        if (!ok) return;
+
+        socket.emit('resetScores');
+
+    });
+
+    const playerCounter =
+        document.getElementById('playerCount');
+
+    socket.on('updateWaitingRoom', (players) => {
+
+        if (playerCounter) {
+
+            playerCounter.textContent =
+                Array.isArray(players)
+                    ? players.length
+                    : 0;
+
+        }
+
+    });
+
+
+
+
+loadSelectedQuiz.addEventListener('click', () => {
+
+    const filename = quizSelect.value;
+    if (!filename) return;
+
+    console.log("🔥 LOAD QUIZ:", filename);
+
+    // LOCK UI
+    loadSelectedQuiz.disabled = true;
+    loadSelectedQuiz.style.opacity = "0.5";
+
+    quizReady = false;
+
+    // =========================
+    // RESET QUIZ FLOW COMPLET
+    // =========================
+    currentQuestionIndex = -1;
+    showingAnswer = false;
+
+    questionCounter.textContent = "QUESTION : 0";
+    quizFlowBtn.textContent = "▶ START QUIZ";
+
+    // 🔥 AJOUT IMPORTANT : reset état visuel/logiciel
+    buzzedPlayers = [];
+    updateBuzzedPlayersList();
+
+    stopAllMedia();
+    socket.emit('stopMedia');
+
+    // =========================
+    // STEP 1
+    // =========================
+    socket.emit('selectBuzzFile', filename);
+
+    // =========================
+    // STEP 2
+    // =========================
+    socket.emit('getBuzzQuestions');
+});
+
+
+
+
+
+
+
+
+    fetch('/api/buzzer-files')
+        .then(res => res.json())
+        .then(files => {
+
+            const quizSelect =
+                document.getElementById('quizSelect');
+
+            quizSelect.innerHTML = "";
+
+            files.forEach(file => {
+
+                const option =
+                    document.createElement('option');
+
+                option.value = file;
+                option.textContent = file;
+
+                quizSelect.appendChild(option);
+
+            });
+
+            console.log("📋 Quiz list loaded:", files);
+
+        })
+
+        .catch(err => {
+
+            console.error(
+                "❌ Impossible de charger la liste des quiz:",
+                err
+            );
+
+        });
+
+
+
+
+socket.onAny((event, data) => {
+    console.log("📡 SOCKET EVENT:", event, data);
+});
+
+
+
+
+    socket.on('buzzQuestionsList', (data) => {
+
+    loadedQuestions = Array.isArray(data) ? data : [];
+
+    const loadBtn = document.getElementById("loadSelectedQuiz");
+    const status = document.getElementById("preloadStatus");
+    const bar = document.getElementById("preloadBar");
+
+    // PRELOAD
+    preloadQuizMedia(loadedQuestions, (p) => {
+        bar.style.width = p.percent + "%";
+        status.textContent = `PRELOAD ${p.percent}%`;
+    }).then(() => {
+
+        quizReady = true;
+
+        status.textContent = "QUIZ READY ✅";
+
+        loadBtn.disabled = false;
+        loadBtn.style.opacity = "1";
+
+        displayQuestions();
+    });
+});
+
+
+
+async function preloadQuizMedia(questions, onProgress) {
+
+    preloadedMedia = {};
+
+    const allMedia = [];
+
+    for (const q of questions) {
+        if (q.mediaExplanation2) allMedia.push(q.mediaExplanation2);
+        if (q.mediaAnswer2) allMedia.push(q.mediaAnswer2);
+        if (q.mediaImage) allMedia.push(q.mediaImage);
+    }
+
+    const total = allMedia.length;
+    let loaded = 0;
+
+    const promises = [];
+
+    const updateProgress = () => {
+        loaded++;
+        if (onProgress) {
+            onProgress({
+                loaded,
+                total,
+                percent: total === 0 ? 100 : Math.round((loaded / total) * 100)
+            });
+        }
+    };
+
+    for (const media of allMedia) {
+
+        if (!media || typeof media !== "string") continue;
+        if (preloadedMedia[media]) continue;
+
+        const ext = media.split('.').pop().toLowerCase();
+
+        let p;
+
+        if (["jpg","jpeg","png","gif","webp"].includes(ext)) {
+
+            const img = new Image();
+
+            p = new Promise(res => {
+                img.onload = img.onerror = () => {
+                    updateProgress();
+                    res(media);
+                };
+            });
+
+            img.src = media;
+            preloadedMedia[media] = img;
+        }
+
+        else if (["mp3","wav","ogg"].includes(ext)) {
+
+            const audio = new Audio();
+            audio.preload = "auto";
+            audio.src = media;
+
+            p = new Promise(res => {
+                audio.oncanplaythrough = audio.onerror = () => {
+                    updateProgress();
+                    res(media);
+                };
+            });
+
+            preloadedMedia[media] = audio;
+        }
+
+        else if (["mp4","webm"].includes(ext)) {
+
+    const video = document.createElement("video");
+
+    // PRELOAD LEGER
+    video.preload = "metadata";
+
+    // optimisations Chrome
+    video.muted = true;
+    video.playsInline = true;
+
+    video.src = media;
+
+    p = new Promise(res => {
+
+        let finished = false;
+
+        const done = () => {
+
+            if (finished) return;
+            finished = true;
+
+            updateProgress();
+            res(media);
+        };
+
+        // charge uniquement les metadata
+        video.onloadedmetadata = done;
+
+        // sécurité erreur
+        video.onerror = done;
+
+        // anti blocage Promise.all
+        setTimeout(done, 1500);
+
+    });
+
+    // on stocke seulement l'URL
+    // PAS le vrai élément vidéo
+    preloadedMedia[media] = {
+        type: "video",
+        src: media
+    };
+}
+
+if (p) promises.push(p);
+}
+
+await Promise.all(promises);
+
+return true;
+}
+
+
+
+
+
+
+
+
+
+
+    function displayQuestions() {
+
+        console.log("loadedQuestions:", loadedQuestions);
+
+        if (!Array.isArray(loadedQuestions)) {
+
+            console.error(
+                "❌ loadedQuestions n'est pas un tableau :",
+                loadedQuestions
+            );
+
+            return;
+
+        }
+
+        questionList.innerHTML = '';
+
+        loadedQuestions.forEach((q, i) => {
+
+            const div = document.createElement('div');
+
+            div.style.borderBottom = '1px solid #ccc';
+            div.style.paddingBottom = '15px';
+            div.style.marginBottom = '15px';
+
+            div.innerHTML = `
+                <p>
+                    <strong>Q${i+1} :</strong>
+                    [${q.type}]
+                    ${q.answer}
+                </p>
+
+                <button
+                    onclick="sendQuestionAndMedia(${i})"
+                    style="background-color:#8b2cbf; color:white;">
+                    QUESTION + MEDIA
+                </button>
+
+                <button
+                    onclick="validateAnswer2(${i})"
+                    style="background-color:#AFFF03; color:black;">
+                    BONNE REPONSE MEDIA
+                </button>
+            `;
+
+            questionList.appendChild(div);
+
+        });
+
+    }
+
+    window.sendMediaExplanation2 = function(index) {
+
+        if (!window.loadedQuestions) return;
+
+        const question = window.loadedQuestions[index];
+
+        if (!question) return;
+
+        const media = question.mediaExplanation2;
+
+        console.log(
+            "DEBUG MEDIA AVANT EMIT:",
+            media
+        );
+
+        if (
+            !media ||
+            (
+                typeof media === "object" &&
+                Object.keys(media).length === 0
+            )
+        ) {
+
+            console.warn("MEDIA VIDE → ANNULÉ");
+            return;
+
+        }
+
+        socket.emit('showMediaExplanation2', media);
+
+    };
+
+
+
+function getPreloadedMedia(media) {
+
+    if (!media) return null;
+
+    return preloadedMedia[media] || null;
+
+}
+
+
+
+
+
+
+
+function showLocalPreview(media) {
+
+    const preview =
+        document.getElementById('livePreview');
+
+    if (!preview) return;
+
+    preview.innerHTML = '';
+
+    if (!media) return;
+
+    const lower = media.toLowerCase();
+
+    // =========================
+    // IMAGE
+    // =========================
+    if (/\.(jpg|jpeg|png|gif|webp)$/i.test(lower)) {
+
+        const img = getPreloadedMedia(media);
+
+        if (img) {
+
+            const clone = img.cloneNode();
+
+            clone.style.maxWidth = "100%";
+            clone.style.maxHeight = "500px";
+
+            preview.appendChild(clone);
+
+        } else {
+
+            const imgEl = document.createElement("img");
+
+            imgEl.src = media;
+            imgEl.style.maxWidth = "100%";
+            imgEl.style.maxHeight = "500px";
+
+            preview.appendChild(imgEl);
+
+        }
+
+    }
+
+    // =========================
+    // VIDEO
+    // =========================
+    else if (/\.(mp4|webm)$/i.test(lower)) {
+
+        const video = document.createElement("video");
+
+video.src = media;
+
+// ULTRA LIGHT
+video.preload = "metadata";
+
+// PAS d'autoplay
+video.controls = true;
+
+// important
+video.muted = true;
+video.playsInline = true;
+
+// optimisation rendering
+video.disablePictureInPicture = true;
+
+video.style.maxWidth = "100%";
+video.style.maxHeight = "280px";
+video.style.borderRadius = "10px";
+
+preview.appendChild(video);
+
+        }
+
+
+
+    // =========================
+    // AUDIO
+    // =========================
+    else if (/\.(mp3|wav|ogg)$/i.test(lower)) {
+
+        const audio = getPreloadedMedia(media);
+
+        if (audio) {
+
+            const clone = audio.cloneNode();
+
+            clone.controls = true;
+
+            preview.appendChild(clone);
+
+        } else {
+
+            const audioEl =
+                document.createElement("audio");
+
+            audioEl.src = media;
+            audioEl.controls = true;
+
+            preview.appendChild(audioEl);
+
+        }
+
+    }
+
+}
+
+
+
+
+
+function stopAllMedia() {
+
+    const preview = document.getElementById('livePreview');
+    if (preview) preview.innerHTML = '';
+
+    document.querySelectorAll('audio').forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+        a.src = "";
+        a.load();
+    });
+
+    document.querySelectorAll('video').forEach(v => {
+        v.pause();
+        v.currentTime = 0;
+        v.src = "";
+        v.load();
+    });
+
+    console.log("🛑 MEDIA STOPPED");
+}
+
+
+
+
+
+
+
+    socket.emit('sendQuestion', {
+
+        question: "TEST EVENT OLD STYLE",
+        options: ["A","B"]
+
+    });
+
+    window.sendQuestionAndMedia = function(index) {
+
+        if (!Array.isArray(loadedQuestions)) {
+
+            console.warn("❌ loadedQuestions invalide");
+            return;
+
+        }
+
+        const question = loadedQuestions[index];
+
+        if (!question) {
+
+            console.warn(
+                "❌ Question introuvable à l’index :",
+                index
+            );
+
+            return;
+
+        }
+
+        selectedQuestionIndex = index;
+
+        const executeAt = getExecuteTime();
+
+        // START BUZZ
+        socket.emit('startBuzzQuestion', {
+
+            index,
+            theme: currentTheme
+
+        });
+
+        // QUESTION SCREEN
+        const payload = {
+
+            question:
+                question.question ??
+                question.answer ??
+                "Question",
+
+            options:
+                Array.isArray(question.options)
+                    ? question.options
+                    : [],
+
+            type: question.type ?? null,
+            executeAt
+
+        };
+
+        console.log(
+            "📤 newQuestion SENT:",
+            payload
+        );
+
+        socket.emit('sendQuestion', payload);
+
+        buzzedPlayers = [];
+
+        updateBuzzedPlayersList();
+
+        // MEDIA EXPLANATION 2
+        if (
+            question.type === 'audio' &&
+            question.mediaImage
+        ) {
+
+            socket.emit('showMediaExplanation2', {
+
+                audio:
+                    question.mediaExplanation2 ?? null,
+
+                image:
+                    question.mediaImage ?? null,
+
+                executeAt
+
+            });
+
+            runAt(executeAt, () => {
+
+                if (question.mediaImage) {
+
+                    showLocalPreview(
+                        question.mediaImage
+                    );
+
+                }
+
+            });
+
+            return;
+
+        }
+
+        // MEDIA SIMPLE
+        if (
+            typeof question.mediaExplanation2 === 'string' &&
+            question.mediaExplanation2.trim() !== ''
+        ) {
+
+            const mediaUrl =
+                question.mediaExplanation2.startsWith('/')
+                    ? question.mediaExplanation2
+                    : '/' + question.mediaExplanation2;
+
+            socket.emit('showMediaExplanation2', {
+
+                media: mediaUrl,
+                executeAt
+
+            });
+
+            runAt(executeAt, () => {
+
+                showLocalPreview(mediaUrl);
+
+            });
+
+            return;
+
+        }
+
+    };
+
+
+
+
+    window.validateAnswer2 = function(index) {
+
+        const question = loadedQuestions[index];
+
+        if (!question) return;
+
+        let payload = question.mediaAnswer2;
+
+        // STRING
+        if (typeof payload === 'string') {
+
+            socket.emit('showMediaAnswer2', payload);
+
+            showLocalPreview(payload);
+
+            return;
+
+        }
+
+        // OBJECT
+        if (
+            typeof payload === 'object' &&
+            !Array.isArray(payload)
+        ) {
+
+            socket.emit('showMediaAnswer2', payload);
+
+            if (payload.image)
+                showLocalPreview(payload.image);
+
+            else if (payload.video)
+                showLocalPreview(payload.video);
+
+            else if (payload.audio)
+                showLocalPreview(payload.audio);
+
+            return;
+
+        }
+
+        console.warn(
+            "⚠️ FORMAT MEDIA INVALIDE :",
+            payload
+        );
+
+    };
+
+    function updateBuzzedPlayersList() {
+
+        const container =
+            document.getElementById(
+                'buzzedPlayersList'
+            );
+
+        container.innerHTML = '';
+
+        if (buzzedPlayers.length === 0) {
+
+            container.innerHTML =
+                "<center><p>Aucun joueur n'a encore buzzé</p></center>";
+
+            return;
+
+        }
+
+        buzzedPlayers
+            .slice(0,5)
+            .forEach((player, idx) => {
+
+                const div =
+                    document.createElement('div');
+
+                div.textContent =
+                    `${idx+1}. ${player}`;
+
+                div.style.fontSize = "24px";
+
+                const btn =
+                    document.createElement('button');
+
+                btn.textContent = "VALIDER";
+
+                btn.style.marginLeft = "15px";
+                btn.style.backgroundColor = "#22c55e";
+                btn.style.color = "white";
+                btn.style.border = "none";
+
+                btn.classList.add('blink');
+
+                btn.onclick = () => {
+
+                    btn.classList.remove('blink');
+
+                    socket.emit(
+                        'validatePlayerAnswer',
+                        {
+                            playerName: player
+                        }
+                    );
+
+                };
+
+                div.appendChild(btn);
+
+                container.appendChild(div);
+
+            });
+
+    }
+
+    socket.on('updateBuzzList', (players) => {
+
+        buzzedPlayers =
+            Array.isArray(players)
+                ? players
+                : [];
+
+        updateBuzzedPlayersList();
+
+    });
+
+    socket.on('updateScores', (scores) => {
+
+  window.latestScores = scores;
+
+  if (!scores || Object.keys(scores).length === 0) {
+    scoreboard.innerHTML = '<p>Aucun score pour le moment.</p>';
+    return;
+  }
+
+  const sorted = Object.entries(scores)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 10); // TOP 10
+
+const table = document.createElement('table');
+const thead = document.createElement('thead');
+const tbody = document.createElement('tbody');
+
+const headerRow = document.createElement('tr');
+headerRow.innerHTML = `<th>🏆</th><th>JOUEURS</th><th>SCORES</th>`;
+thead.appendChild(headerRow);
+
+// 👇 AJOUT DU INDEX
+sorted.forEach(([player, score], index) => {
+  const row = document.createElement('tr');
+  row.innerHTML = `<td>${index + 1}</td><td>${player}</td><td>${score}</td>`;
+  tbody.appendChild(row);
+});
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+scoreboard.innerHTML = '';
+scoreboard.appendChild(table);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+    qrButton.addEventListener('click', () => {
+
+        const isLocal = location.hostname === "localhost" || location.hostname.startsWith("192.168");
+
+const playerUrl = isLocal
+    ? `http://192.168.0.185:${location.port}/player.html`
+    : `${window.location.origin}/player.html`;
+
+        if (!qrScreenVisible) {
+
+            socket.emit(
+                'showQRCodeOnScreen',
+                playerUrl
+            );
+
+            qrButton.textContent =
+                'QR CODE + WAITING ROOM ON';
+
+            qrButton.style.backgroundColor =
+                '#78F07E';
+
+            qrScreenVisible = true;
+
+        } else {
+
+            socket.emit('hideQRCode');
+
+            qrButton.textContent =
+                'QR CODE + WAITING ROOM OFF';
+
+            qrButton.style.backgroundColor =
+                '#8b2cbf';
+
+            qrScreenVisible = false;
+
+        }
+
+    });
+
+
+
+
+
+endQuizBtn.addEventListener('click', () => {
+
+    podiumVisible = !podiumVisible;
+
+    if (podiumVisible) {
+
+        const scores = window.latestScores || {};
+
+        const podium = Object.entries(scores)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 3)
+            .map(([name, score]) => ({
+                playerName: name,
+                score
+            }));
+
+        socket.emit('showPodium', {
+            podium,
+            playSound: true   // 🔥 AJOUT IMPORTANT
+        });
+
+        endQuizBtn.textContent = "🏆 PODIUM ON";
+        endQuizBtn.style.backgroundColor = "#78F07E";
+
+    } else {
+
+        socket.emit('hidePodium');
+
+        endQuizBtn.textContent = "🏆 PODIUM OFF";
+        endQuizBtn.style.backgroundColor = "#f44336";
+    }
+});
+
+
+
+
+
+
+
+
+
+    socket.on('showPodium', (podium) => {
+
+        if (!podium || podium.length === 0) {
+
+            podiumDiv.innerHTML =
+                "<p>Aucun podium à afficher.</p>";
+
+            return;
+
+        }
+
+        const podiumHTML = podium
+            .map((player,idx) => `
+                <p>
+                    ${idx+1}.
+                    ${player.playerName}
+                    (${player.score} pts)
+                </p>
+            `)
+            .join('');
+
+        podiumDiv.innerHTML = podiumHTML;
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
