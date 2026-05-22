@@ -1,0 +1,198 @@
+{
+  "A-cinemaFR": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/introcimemafr.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "A-cinemaFR/video/jeanmineur.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/professionnel.mp4",
+      "mediaImage": "",
+      "answer": "LE PROFESSIONNEL",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/professionnel2.mp3",
+        "image": "A-cinemaFR/img/professionnel.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/visiteurs.mp4",
+      "mediaImage": "",
+      "answer": "LES VISITEURS",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/visiteurs2.mp3",
+        "image": "A-cinemaFR/img/visiteurs.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/boum.mp4",
+      "answer": "LA BOUM",
+      "mediaAnswer2": "A-cinemaFR/video/boum2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/amelie.mp4",
+      "mediaImage": "",
+      "answer": "Le fabuleux destin d'AMELIE POULAIN",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/amelie2.mp3",
+        "image": "A-cinemaFR/img/amelie.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/tontons.mp4",
+      "mediaImage": "",
+      "answer": "LES TONTONS FLINGUEURS",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/tontons2.mp3",
+        "image": "A-cinemaFR/img/tontons.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/taxi.mp4",
+      "answer": "TAXI",
+      "mediaAnswer2": "A-cinemaFR/video/taxi2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/grandbleu.mp4",
+      "mediaImage": "",
+      "answer": "LE GRAND BLEU",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/grandbleu2.mp3",
+        "image": "A-cinemaFR/img/grandbleu.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/element.mp4",
+      "mediaImage": "",
+      "answer": "LE CINQUIEME ELEMENT",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/element.mp3",
+        "image": "A-cinemaFR/img/element.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/carioca.mp4",
+      "answer": "LA CITE DE LA PEUR",
+      "mediaAnswer2": "A-cinemaFR/video/carioca2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/bronzes.mp4",
+      "mediaImage": "",
+      "answer": "LES BRONZES",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/bronzes2.mp3",
+        "image": "A-cinemaFR/img/bronzes.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/rochefort.mp4",
+      "answer": "LES DEMOISELLES DE ROCHEFORT",
+      "mediaAnswer2": "A-cinemaFR/video/rochefort2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/asterix.mp4",
+      "answer": "ASTERIX ET CLEOPATRE",
+      "mediaAnswer2": "A-cinemaFR/video/asterix2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/auberge.mp4",
+      "mediaImage": "",
+      "answer": "L'AUBERGE ESPAGNOLE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/auberge2.mp3",
+        "image": "A-cinemaFR/img/auberge.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/soupeauxchoux.mp4",
+      "mediaImage": "",
+      "answer": "LA SOUPE AUX CHOUX",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/soupeauxchoux2.mp3",
+        "image": "A-cinemaFR/img/soupe2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/7compagnie.mp4",
+      "mediaImage": "",
+      "answer": "LA 7eme CONPAGNIE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/7compagnie2.mp3",
+        "image": "A-cinemaFR/img/7compagnie.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/grandblond.mp4",
+      "mediaImage": "",
+      "answer": "LE GRAND BLOND AVEC UNE CHAUSSURE NOIRE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/grandblond2.mp3",
+        "image": "A-cinemaFR/img/grandblond.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/cuisse.mp4",
+      "mediaImage": "",
+      "answer": "L'AILE ou LA CUISSE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/cuisse2.mp3",
+        "image": "A-cinemaFR/img/cuisse.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/chti.mp4",
+      "mediaImage": "",
+      "answer": "BIENVENU CHEZ LES CHTIS",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/chti.mp3",
+        "image": "A-cinemaFR/img/chti.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/gendarme.mp4",
+      "mediaImage": "",
+      "answer": "LE GENDARME de SAINT TROPEZ",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/gendarme2.mp3",
+        "image": "A-cinemaFR/img/gendarme.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/rabbijacob.mp4",
+      "answer": "RABBIE JACOB",
+      "mediaAnswer2": "A-cinemaFR/video/rabbijacob2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/intouchables.mp4",
+      "answer": "INTOUCHABLES",
+      "mediaAnswer2": "A-cinemaFR/video/intouchables2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Accueil Quiz</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* fond dynamique */
+  background: linear-gradient(270deg, #0D4054, #92159E, #C64ED9, #007BFF);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* animation fond */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#container {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.3);
+}
+
+/* logo */
+#logoContainer img {
+  width: 180px;
+  margin-bottom: 30px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* boutons */
+.menuBtn {
+  display: block;
+  margin: 15px auto;
+  padding: 15px 25px;
+  width: 250px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+/* styles différents */
+.player { background: #28a745; }
+.admin  { background: #dc3545; }
+.buzadmin { background: #DE8614; }
+.screen { background: #007BFF; }
+
+.menuBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px white;
+}
+
+/* petit effet glow */
+.menuBtn:active {
+  transform: scale(0.95);
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px black;
+}
+
+#qrcode { margin-top: 10px; border: 1px solid #ccc; width: 180px; height: 180px; }
+
+.qr {
+  background: #facc15; /* jaune OFF */
+  color: white;
+}
+
+.qr.on {
+  background: #22c55e; /* vert ON */
+  color: black;
+}
+</style>
+
+</head>
+<body>
+
+<div id="container">
+
+  <div class="bannerCol" id="logoContainer">
+    <img src="Mis-ROND150.png" alt="Logo" />
+  </div>
+
+  <h1>🎮 Bienvenue au Quiz 🎮</h1>
+
+  <a href="http://192.168.0.185:3000/player.html" target="_blank" class="menuBtn player">
+    👤 Joueurs
+  </a>
+
+<a href="http://192.168.0.185:3000/screen.html" target="_blank" class="menuBtn screen">
+    📺 Écran
+  </a>
+
+  <a href="http://192.168.0.185:3000/admin.html" target="_blank" class="menuBtn admin">
+    ⚙️ Admin
+  </a>
+
+  <a href="http://192.168.0.185:3000/buzadmin.html" target="_blank" class="menuBtn buzadmin">
+    ⚙️ buzAdmin
+  </a>
+
+  
+
+
+
+
+<a href="#" id="qrButton" class="menuBtn qr">
+  📱 Screen QR CODE OFF
+</a><!-- 🔥 AJOUT ICI -->
+<canvas id="qrcode"></canvas>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script>
+
+let socket;
+let qrScreenVisible = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ✅ connexion socket
+  socket = io();
+
+  socket.on('connect', () => {
+    console.log('Admin connecté, id:', socket.id);
+  });
+
+  // 🔥 URL joueur
+  const localIP = '192.168.0.185';
+  const port = window.location.port;
+  const playerUrl = `http://${localIP}${port ? ':' + port : ''}/player.html`;
+
+  // 🔥 QR affiché au chargement
+  const canvas = document.getElementById('qrcode');
+  QRCode.toCanvas(canvas, playerUrl, function (error) {
+    if (error) console.error(error);
+  });
+
+  // 🔥 bouton
+  const qrButton = document.getElementById('qrButton');
+
+qrButton.addEventListener('click', () => {
+
+  if (!qrScreenVisible) {
+    socket.emit('showQRCodeOnScreen', playerUrl);
+    qrButton.textContent = '📱 Screen QR CODE ON';
+
+    qrButton.classList.add('on'); // 🔥 vert
+    qrScreenVisible = true;
+
+  } else {
+    socket.emit('hideQRCode');
+    qrButton.textContent = '📱 Screen QR CODE OFF';
+
+    qrButton.classList.remove('on'); // 🔥 retour jaune
+    qrScreenVisible = false;
+  }
+
+});
+
+});
+
+</script>
+</body>
+</html>

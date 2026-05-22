@@ -1,0 +1,39 @@
+{
+  "cultureGGGG": [
+    {
+      "question": "Quelle est la capitale des États-Unis ?",
+      "options": ["Paris", "Washington", "Berlin", "Madrid"],
+      "answer": "Washington",
+      "correctIndex": 1,
+      "image": "img/quiz1.png",
+      "mediaExplanation": "img/washington.jpg"
+    },
+    {
+      "question": "Quel est l’élément chimique dont le symbole est ‘O’ ?",
+      "options": ["Or", "Oxygène", "Osmium", "Carbone"],
+      "answer": "Oxygène",
+      "correctIndex": 1,
+      "mediaExplanation": "video/CHTI.mp4"
+    },
+    {
+      "question": "Combien y a-t-il de continents sur Terre ?",
+      "options": ["5", "6", "7"],
+      "answer": "7",
+      "correctIndex": 2
+    },
+    {
+      "question": "Quel est le plus grand océan du monde ?",
+      "options": ["Atlantique", "Pacifique", "Indien"],
+      "answer": "Pacifique",
+      "correctIndex": 1,
+      "mediaExplanation": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pacific_Ocean_-_NASA.jpg/320px-Pacific_Ocean_-_NASA.jpg"
+    },
+    {
+      "question": "En quelle année a eu lieu la Révolution française ?",
+      "options": ["1789", "1812", "1492"],
+      "answer": "1789",
+      "correctIndex": 0,
+      "mediaExplanation": "video/CHTI.mp4"
+    }
+  ]
+}

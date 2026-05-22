@@ -1,0 +1,39 @@
+{
+  "cinéé": [
+    {
+      "question": "Quel film a remporté l'Oscar du meilleur film en 1994 ?",
+      "options": ["Forrest Gump", "Titanic", "Pulp Fiction", "Mary à tout prix"],
+      "answer": "Forrest Gump",
+      "correctIndex": 0,
+      "mediaExplanation": "img/forrest.jpg"
+    },
+    {
+      "question": "Qui a réalisé le film 'Inception' ?",
+      "options": ["Steven Spielberg", "Christopher Nolan", "James Cameron", "Tom Price"],
+      "answer": "Christopher Nolan",
+      "correctIndex": 1,
+      "mediaExplanation": "img/inception.jpg"
+    },
+    {
+      "question": "Quel acteur incarne Iron Man ?",
+      "options": ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Alan Jones"],
+      "answer": "Robert Downey Jr.",
+      "correctIndex": 0,
+      "mediaExplanation": "img/iron.jpg"
+    },
+    {
+      "question": "Dans quel film entend-on la réplique 'Je suis ton père' ?",
+      "options": ["Star Wars", "Matrix", "Blade Runner", "Star Trek" ],
+      "answer": "Star Wars",
+      "correctIndex": 0,
+      "mediaExplanation": "img/dark.jpg"
+    },
+    {
+      "question": "Quel dessin animé met en scène un poisson clown ?",
+      "options": ["Le Monde de Dory", "Le Monde de Nemo", "Shark Tale", "Aladin"],
+      "answer": "Le Monde de Nemo",
+      "correctIndex": 1,
+      "mediaExplanation": "img/nemo.jpg"
+    }
+  ]
+}

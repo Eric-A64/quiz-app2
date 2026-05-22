@@ -1,0 +1,35 @@
+{
+  "DESSINS ANIMES": [
+    {
+      "question": "Cendrillon est une princesse",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": "Vrai",
+      "correctIndex": 0,
+      "image": "img/norah.jpg",
+      "mediaExplanation": "video/Buzz-l-eclair.mp4"
+    },
+    {
+      "question": "Will Smith est le père de Fifi",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": "Vrai",
+      "correctIndex": 0,
+      "mediaExplanation": "video/flash.mp4"
+    },
+    {
+      "question": "Ayrton Senna à gané 6 fois le grand prix de Monaco",
+      "options": [
+        "VRAI",
+        "FAUX"
+      ],
+      "answer": "VRAI",
+      "correctIndex": 0,
+      "mediaExplanation": "video/SENNA.mp4"
+    }
+  ]
+}

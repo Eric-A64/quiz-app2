@@ -1,0 +1,38 @@
+{
+  "sportttt": [
+    {
+      "question": "Combien de joueurs dans une équipe de football ?",
+      "options": ["9", "11", "7"],
+      "answer": "11",
+      "correctIndex": 1,
+      "mediaExplanation": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/320px-Soccerball.svg.png"
+    },
+    {
+      "question": "Quel pays a remporté la Coupe du Monde 2018 ?",
+      "options": ["Allemagne", "France", "Brésil"],
+      "answer": "France",
+      "correctIndex": 1,
+      "mediaExplanation": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_France.svg/320px-Flag_of_France.svg.png"
+    },
+    {
+      "question": "Combien de sets faut-il gagner pour remporter un match de tennis masculin en Grand Chelem ?",
+      "options": ["2", "3", "5"],
+      "answer": "3",
+      "correctIndex": 1
+    },
+    {
+      "question": "Quel sport est pratiqué au Tour de France ?",
+      "options": ["Cyclisme", "Athlétisme", "Moto"],
+      "answer": "Cyclisme",
+      "correctIndex": 0,
+      "mediaExplanation": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2015_Tour_de_France_stage_1.jpg/320px-2015_Tour_de_France_stage_1.jpg"
+    },
+    {
+      "question": "Quel est le surnom de l’équipe de rugby de Nouvelle-Zélande ?",
+      "options": ["Springboks", "Wallabies", "All Blacks"],
+      "answer": "All Blacks",
+      "correctIndex": 2,
+      "mediaExplanation": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/All_Blacks_2011_2.jpg/320px-All_Blacks_2011_2.jpg"
+    }
+  ]
+}

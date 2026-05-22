@@ -1,0 +1,212 @@
+{
+  "60-80-Musique2": [
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-serie2.mp4",
+      "answer": "INTRO       //////////////////// NO CLIC",
+      "mediaAnswer2": ""
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/ymca.mp4",
+      "answer": "INTRO VILLAGE PEOPLE - YMCA",
+      "mediaAnswer2": "yellow-buzz.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/september.mp3",
+      "mediaImage": "80/img/q11.gif",
+      "answer": "EARTH WIND and FIRE - September",
+      "mediaAnswer2": {
+        "audio": "80/audio/september2.mp3",
+        "image": "80/img/ewf.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/fresh.mp3",
+      "mediaImage": "80/img/q12.gif",
+      "answer": "KOOL AND THE GANG - FRESH",
+      "mediaAnswer2": {
+        "audio": "80/audio/fresh2.mp3",
+        "image": "80/img/kool.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/gimme-gimme.mp3",
+      "mediaImage": "80/img/q13.gif",
+      "answer": "ABBA - Gimme gimme gimme",
+      "mediaAnswer2": {
+        "audio": "80/audio/gimme-gimme2.mp3",
+        "image": "80/img/abba2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/loeb.mp3",
+      "mediaImage": "80/img/q14.gif",
+      "answer": "CAROLINE LOEB - C'est la ouate",
+      "mediaAnswer2": {
+        "audio": "80/audio/loeb2.mp3",
+        "image": "80/img/loeb.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/bashung.mp3",
+      "mediaImage": "80/img/q15.gif",
+      "answer": "ALAIN BASHUNG - Vertige de l'amour",
+      "mediaAnswer2": {
+        "audio": "80/audio/bashung2.mp3",
+        "image": "80/img/bashung.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/andy.mp3",
+      "mediaImage": "80/img/q16.gif",
+      "answer": "RITA MITSOUKO - Andy",
+      "mediaAnswer2": {
+        "audio": "80/audio/andy2.mp3",
+        "image": "80/img/andy.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/raft.mp3",
+      "mediaImage": "80/img/q17.gif",
+      "answer": "RAFT - Yaka dansé",
+      "mediaAnswer2": {
+        "audio": "80/audio/raft2.mp3",
+        "image": "80/img/raft.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/cabrel.mp3",
+      "mediaImage": "80/img/q18.gif",
+      "answer": "FRANCIS CABREL - La dame de haute Savoie",
+      "mediaAnswer2": {
+        "audio": "80/audio/cabrel2.mp3",
+        "image": "80/img/cabrel.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/marley.mp3",
+      "mediaImage": "80/img/q19.gif",
+      "answer": "BOB MARLEY - Could you be loved",
+      "mediaAnswer2": {
+        "audio": "80/audio/marley2.mp3",
+        "image": "80/img/marley.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/katebush.mp3",
+      "mediaImage": "80/img/q20.gif",
+      "answer": "KATE BUSH - Running Up That Hill ",
+      "mediaAnswer2": {
+        "audio": "80/audio/katebush2.mp3",
+        "image": "80/img/katebush.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/cure.mp3",
+      "mediaImage": "80/img/q11.gif",
+      "answer": "THE CURE - Boys don't cry",
+      "mediaAnswer2": {
+        "audio": "80/audio/cure2.mp3",
+        "image": "80/img/cure.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/pink-floyd.mp3",
+      "mediaImage": "80/img/q12.gif",
+      "answer": "PINK FLOYD - Another brick in the wall",
+      "mediaAnswer2": {
+        "audio": "80/audio/pink-floyd2.mp3",
+        "image": "80/img/pink-floyd.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/prince.mp3",
+      "mediaImage": "80/img/q13.gif",
+      "answer": "PRINCE - Kiss",
+      "mediaAnswer2": {
+        "audio": "80/audio/prince2.mp3",
+        "image": "80/img/prince.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/depeche.mp3",
+      "mediaImage": "80/img/q14.gif",
+      "answer": "DEPECHE MODE - I just can't get enough",
+      "mediaAnswer2": {
+        "audio": "80/audio/depeche2.mp3",
+        "image": "80/img/depeche.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/madness.mp3",
+      "mediaImage": "80/img/q15.gif",
+      "answer": "MADNESS - One step beyond",
+      "mediaAnswer2": {
+        "audio": "80/audio/madness2.mp3",
+        "image": "80/img/madness.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/anita.mp3",
+      "mediaImage": "80/img/q16.gif",
+      "answer": "ANITA WARD - Ring my bell",
+      "mediaAnswer2": {
+        "audio": "80/audio/anita2.mp3",
+        "image": "80/img/anita.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/ross.mp3",
+      "mediaImage": "80/img/q17.gif",
+      "answer": "DIANA ROSS - Upside down",
+      "mediaAnswer2": {
+        "audio": "80/audio/ross2.mp3",
+        "image": "80/img/ross.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/dalida.mp3",
+      "mediaImage": "80/img/q18.gif",
+      "answer": "DALIDA - Mourir sur scène",
+      "mediaAnswer2": {
+        "audio": "80/audio/dalida2.mp3",
+        "image": "80/img/dalida.jpg"
+       }
+     },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/montagne.mp3",
+      "mediaImage": "80/img/q19.gif",
+      "answer": "GILBERT MONTAGNE - On vas s'aimer",
+      "mediaAnswer2": {
+        "audio": "80/audio/montagne2.mp3",
+        "image": "80/img/montagne.jpg"
+       }
+     },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

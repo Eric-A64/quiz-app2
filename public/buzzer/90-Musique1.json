@@ -1,0 +1,187 @@
+{
+  "90-Musique1": [
+{
+      "type": "video",
+      "mediaExplanation2": "90/video/90-INTRO.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "yellow-buzz.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/mylene.mp3",
+      "mediaImage": "90/img/q11.gif",
+      "answer": "MYLENE FARMER - Désenchanté",
+      "mediaAnswer2": {
+        "audio": "90/audio/mylene2.mp3",
+        "image": "90/img/mylene.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/ramazzotti.mp3",
+      "mediaImage": "90/img/q12.gif",
+      "answer": "EROS RAMAZZOTTI - Cose della vita ",
+      "mediaAnswer2": {
+        "audio": "90/audio/ramazzotti2.mp3",
+        "image": "90/img/ramazzotti.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/alizee.mp3",
+      "mediaImage": "90/img/q13.gif",
+      "answer": "ALIZEE - Moi Lolita",
+      "mediaAnswer2": {
+        "audio": "90/audio/alizee2.mp3",
+        "image": "90/img/alizee.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/louise.mp3",
+      "mediaImage": "90/img/q14.gif",
+      "answer": "LOUISE ATTAQUE - J't'emmene au vent",
+      "mediaAnswer2": {
+        "audio": "90/audio/louise2.mp3",
+        "image": "90/img/louise.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/britney.mp3",
+      "mediaImage": "90/img/q15.gif",
+      "answer": "BRITNEY SPEARS - Baby one more time",
+      "mediaAnswer2": {
+        "audio": "90/audio/britney2.mp3",
+        "image": "90/img/britney.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/gmickael.mp3",
+      "mediaImage": "90/img/q17.gif",
+      "answer": "GEORGE MICKAEL - Freedom",
+      "mediaAnswer2": {
+        "audio": "90/audio/gmickael2.mp3",
+        "image": "90/img/gmickael.gif"
+        }
+      },
+
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/spice.mp3",
+      "mediaImage": "90/img/q16.gif",
+      "answer": "SPICE GIRLS - Wannabe",
+      "mediaAnswer2": {
+        "audio": "90/audio/spice2.mp3",
+        "image": "90/img/spice.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/sex-bomb.mp3",
+      "mediaImage": "90/img/q17.gif",
+      "answer": "TOM JONES - Sex Bomb",
+      "mediaAnswer2": {
+        "audio": "90/audio/sex-bomb2.mp3",
+        "image": "90/img/sex-bomb.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/loubega.mp3",
+      "mediaImage": "90/img/q18.gif",
+      "answer": "LOU BEGA - Mambo N° 5",
+      "mediaAnswer2": {
+        "audio": "90/audio/loubega2.mp3",
+        "image": "90/img/loubega.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/matmatha.mp3",
+      "mediaImage": "90/img/q19.gif",
+      "answer": "MATMATHA - Lambé en Dro",
+      "mediaAnswer2": {
+        "audio": "90/audio/matmatha2.mp3",
+        "image": "90/img/matmatha.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/scatman.mp3",
+      "mediaImage": "90/img/q20.gif",
+      "answer": "JOHN SCATMAN - Be bop be ba bop",
+      "mediaAnswer2": {
+        "audio": "90/audio/scatman2.mp3",
+        "image": "90/img/scatman.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/dralban.mp3",
+      "mediaImage": "90/img/q11.gif",
+      "answer": "DR ALBAN - Sing halleluia",
+      "mediaAnswer2": {
+        "audio": "90/audio/dralban2.mp3",
+        "image": "90/img/dralban.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/francky.mp3",
+      "mediaImage": "90/img/q12.gif",
+      "answer": "FRANCKY VINCENT - Fruit de la passion",
+      "mediaAnswer2": {
+        "audio": "90/audio/francky2.mp3",
+        "image": "90/img/francky.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/noirdesir.mp3",
+      "mediaImage": "90/img/q13.gif",
+      "answer": "NOIR DESIR - L'homme pressé",
+      "mediaAnswer2": {
+        "audio": "90/audio/noirdesir2.mp3",
+        "image": "90/img/noirdesir.gif"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/corona.mp3",
+      "mediaImage": "90/img/q14.gif",
+      "answer": "CORONA - This is the rythm of the night",
+      "mediaAnswer2": {
+        "audio": "90/audio/corona2.mp3",
+        "image": "90/img/corona.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/gala.mp3",
+      "mediaImage": "90/img/q15.gif",
+      "answer": "GALA - Freed from desire",
+      "mediaAnswer2": {
+        "audio": "90/audio/gala2.mp3",
+        "image": "90/img/gala.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "90/audio/ricky.mp3",
+      "mediaImage": "90/img/q16.gif",
+      "answer": "RICKY MARTIN - uno, dos, tres",
+      "mediaAnswer2": {
+        "audio": "90/audio/ricky2.mp3",
+        "image": "90/img/ricky.gif"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "60-80-Musique1": [
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-serie1.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": {
+        "audio": "score.mp3",
+        "image": "karaoke.jpg"
+      }
+    },
+
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/Stand By Me-ERIC-PAROLES.mp4",
+      "answer": "KARAOKE - BEN E KING - STAND BY ME",
+      "mediaAnswer2": {
+        "audio": "score.mp3",
+        "image": "buzGIF.gif"
+      }
+    },
+
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/daddy-cool.mp3",
+      "mediaImage": "80/img/q1.gif",
+      "answer": "BONEY M - Daddy cool",
+      "mediaAnswer2": {
+        "audio": "80/audio/daddy-cool2.mp3",
+        "image": "80/img/boneym.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/harley-davidson.mp3",
+      "mediaImage": "80/img/q2.gif",
+      "answer": "BRIGITTE BARDOT - Harley Davidson",
+      "mediaAnswer2": {
+        "audio": "80/audio/harley-davidson2.mp3",
+        "image": "80/img/bardot.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/jeanette.mp3",
+      "mediaImage": "80/img/q3.gif",
+      "answer": "JEANETTE - Porque te vas",
+      "mediaAnswer2": {
+        "audio": "80/audio/jeanette2.mp3",
+        "image": "80/img/jeanette.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/cactus.mp3",
+      "mediaImage": "80/img/q4.gif",
+      "answer": "JACQUES DUTRONC - Les Cactus",
+      "mediaAnswer2": {
+        "audio": "80/audio/cactus2.mp3",
+        "image": "80/img/dutronc.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/felicita.mp3",
+      "mediaImage": "80/img/q5.gif",
+      "answer": "ALBANO et ROMINA POWER - Félicita",
+      "mediaAnswer2": {
+        "audio": "80/audio/felicita2.mp3",
+        "image": "80/img/felicita.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/kimcarnes.mp3",
+      "mediaImage": "80/img/q6.gif",
+      "answer": "KIM CARNES - Bette Davis eyes",
+      "mediaAnswer2": {
+        "audio": "80/audio/kimcarnes2.mp3",
+        "image": "80/img/kimcarnes.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/start-me-up.mp3",
+      "mediaImage": "80/img/q7.gif",
+      "answer": "ROLLING STONES - Start me up",
+      "mediaAnswer2": {
+        "audio": "80/audio/start-me-up2.mp3",
+        "image": "80/img/stones.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/help.mp3",
+      "mediaImage": "80/img/q8.gif",
+      "answer": "THE BEATLES - Help",
+      "mediaAnswer2": {
+        "audio": "80/audio/help2.mp3",
+        "image": "80/img/help.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/poupee-de-cire.mp3",
+      "mediaImage": "80/img/q9.gif",
+      "answer": "FRANCE GALL - Poupée de cire",
+      "mediaAnswer2": {
+        "audio": "80/audio/poupee-de-cire2.mp3",
+        "image": "80/img/gall2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/marilyn.mp3",
+      "mediaImage": "80/img/q10.gif",
+      "answer": "MARILYN MONROE - I wanna be loved by you",
+      "mediaAnswer2": {
+        "audio": "80/audio/marilyn2.mp3",
+        "image": "80/img/marilyn.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/girlsjust.mp3",
+      "mediaImage": "80/img/q1.gif",
+      "answer": "CYNDI LAUPER - Girls just want to have fun",
+      "mediaAnswer2": {
+        "audio": "80/audio/girlsjust2.mp3",
+        "image": "80/img/lauper.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/beachboys.mp3",
+      "mediaImage": "80/img/q2.gif",
+      "answer": "THE BEACH BOYS - Good vibration",
+      "mediaAnswer2": {
+        "audio": "80/audio/beachboys2.mp3",
+        "image": "80/img/beachboys.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/blameit.mp3",
+      "mediaImage": "80/img/q3.gif",
+      "answer": "THE JACKSONS - Blame it on a bouggie",
+      "mediaAnswer2": {
+        "audio": "80/audio/blameit2.mp3",
+        "image": "80/img/jacksons.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/think.mp3",
+      "mediaImage": "80/img/q4.gif",
+      "answer": "ARETHA FRANKLIN - Think",
+      "mediaAnswer2": {
+        "audio": "80/audio/think2.mp3",
+        "image": "80/img/aretha.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/Messagein.mp3",
+      "mediaImage": "80/img/q5.gif",
+      "answer": "THE POLICE - Message in the bottle",
+      "mediaAnswer2": {
+        "audio": "80/audio/Messagein2.mp3",
+        "image": "80/img/police.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/rappers-delight.mp3",
+      "mediaImage": "80/img/q6.gif",
+      "answer": "SUGARHILL GANG - Rappers Delight",
+      "mediaAnswer2": {
+        "audio": "80/audio/rappers-delight2.mp3",
+        "image": "80/img/rappers.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/bee-gees.mp3",
+      "mediaImage": "80/img/q10.gif",
+      "answer": "BEE GEES - Stayin alive",
+      "mediaAnswer2": {
+        "audio": "80/audio/bee-gees2.mp3",
+        "image": "80/img/bee2.jpg"
+       }
+     },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/salsa-du-demon.mp3",
+      "mediaImage": "80/img/q7.gif",
+      "answer": "Le GRAND ORCHESTRE DU SPLENDID - Salsa du démon",
+      "mediaAnswer2": {
+        "audio": "80/audio/salsa-du-demon2.mp3",
+        "image": "80/img/salsa-du-demon.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/kole-sere.mp3",
+      "mediaImage": "80/img/q8.gif",
+      "answer": "PHILIPPE LAVIL / JOCELYNE BEROARD - Kolé séré",
+      "mediaAnswer2": {
+        "audio": "80/audio/kole-sere2.mp3",
+        "image": "80/img/kole-sere.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/lamour-a-la-plage.mp3",
+      "mediaImage": "80/img/q9.gif",
+      "answer": "NIAGARA - lamour à la plage",
+      "mediaAnswer2": {
+        "audio": "80/audio/lamour-a-la-plage2.mp3",
+        "image": "80/img/niagara.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "80/audio/hero.mp3",
+      "mediaImage": "80/img/q5.gif",
+      "answer": "DANIEL BALAVOINE - JE NE SUIS PAS UN HERO",
+      "mediaAnswer2": {
+        "audio": "80/audio/hero2.mp3",
+        "image": "80/img/balavoine.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/autrehistoire3.mp4",
+      "answer": "KARAOKE - GERARD BLANC + FINAL",
+      "mediaAnswer2": "80/video/autrehistoire2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FINAL",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+
+  ]
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Joueur</title>
+
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #0D4054;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+#buzzerContainer {
+  display: none;
+}
+
+
+
+#logoContainer img {
+  width: 120px;
+  height: auto;
+animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+
+    /* ===== HEADER avec logo ===== */
+    #header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    }
+    #header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    #questionContainer {
+      max-width: 600px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .question {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    @media (max-width: 500px) {
+      .options { grid-template-columns: 1fr; }
+    }
+
+    .option {
+      background-color: #92159E;
+      color: white;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 2rem;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .option:hover { background-color: #0D4054; }
+    .selected { border: 3px solid yellow; }
+    .correct { background-color: #28a745 !important; cursor: default; }
+    .incorrect { background-color: #dc3545 !important; cursor: default; }
+
+    .waiting {
+      font-style: italic;
+      color: #ccc;
+      margin-top: 40px;
+      font-size: 1.2rem;
+    }
+
+    /* ===== BOUTON GO rapproché ===== */
+    #validateBtn {
+      margin-top: 8px;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #validateBtn:disabled {
+      background-color: #6b7280;
+      cursor: not-allowed;
+    }
+
+    #nameForm {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 400px;
+      background-color: #1e293b;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    #nameInput {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: none;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+
+    #startBtn {
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      border: none;
+      background-color: #1397da;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    #startBtn:hover { background-color: #1b5877; }
+
+    #welcomeMsg {
+      font-size: 1.3rem;
+      margin-bottom: 200px;
+      color: #a5f3fc;
+      font-weight: bold;
+    }
+
+    /* ===== BOUTON BUZZER ===== */
+    #buzzerBtn {
+      display: none;
+      margin-top: 8px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #eab308;
+      color: #0f172a;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #buzzerBtn:disabled {
+      background-color: #a16207;
+      color: #fef9c3;
+      cursor: not-allowed;
+    }
+
+    /* ===== VERSION SMARTPHONE COMPACTE ===== */
+    @media (max-width: 600px) {
+      body {
+        padding: 8px;
+      }
+
+      #header {
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+
+      #header img {
+        width: 95px !important;
+        height: auto !important;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.15rem;
+      }
+
+      #questionContainer {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .question {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        line-height: 1.15;
+      }
+
+      .options {
+        gap: 6px;
+      }
+
+      .option {
+        padding: 10px 12px;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        line-height: 1.1;
+      }
+
+      .selected {
+        border: 2px solid yellow;
+      }
+
+      .waiting {
+        margin-top: 16px;
+        font-size: 0.95rem;
+      }
+
+      #validateBtn {
+        margin-top: 4px;
+        padding: 7px 14px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+      }
+
+      #buzzerBtn {
+        margin-top: 6px;
+        padding: 9px 16px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+      }
+
+      #nameForm {
+        margin: 16px auto;
+        padding: 14px;
+        max-width: 100%;
+        gap: 8px;
+      }
+
+      #nameInput {
+        padding: 10px;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+      }
+
+
+      #startBtn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+      }
+
+      #welcomeMsg {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎮 Quiz Joueur</h1>
+
+<div id="logoContainer">
+  <img src="Mis-ROND120.png" alt="Logo" />
+</div>
+
+<div id="nameForm">
+  <input type="text" id="nameInput" placeholder="Ton pseudo..." autocomplete="off" />
+  <button id="startBtn">Commencer</button>
+</div>
+
+<div id="welcomeMsg" style="display:none;"></div>
+
+<div id="buzzerContainer">
+  <img id="buzzer" src="buzz1.png" />
+</div>
+
+<div id="questionContainer">
+  <p class="waiting">Buzzer ou première question en attente...</p>
+</div>
+
+<button id="validateBtn" disabled>VALIDER !</button>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+const socket = io();
+
+console.log("CLIENT READY");
+
+const questionContainer = document.getElementById('questionContainer');
+const validateBtn = document.getElementById('validateBtn');
+const nameForm = document.getElementById('nameForm');
+const nameInput = document.getElementById('nameInput');
+const startBtn = document.getElementById('startBtn');
+const welcomeMsg = document.getElementById('welcomeMsg');
+const buzzer = document.getElementById("buzzer");
+
+let currentQuestion = null;
+let selectedOption = null;
+let playerName = null;
+let canBuzz = true;
+
+/* ================= PSEUDO FIX ================= */
+
+startBtn.addEventListener('click', () => {
+
+  const name = nameInput.value.trim();
+  if (!name) {
+    alert("Entrez un prénom");
+    return;
+  }
+
+  playerName = name;
+
+  console.log("JOIN:", playerName);
+
+  socket.emit('playerJoin', playerName);
+
+  nameForm.style.display = 'none';
+  welcomeMsg.style.display = 'block';
+  welcomeMsg.textContent = `Hello ${playerName}`;
+});
+
+/* ================= BUZZ ================= */
+
+function sendBuzz() {
+  if (!canBuzz) return;
+
+  if (!playerName || playerName.trim() === "") {
+    console.log("❌ BUZZ BLOQUÉ : pas de playerName");
+    return;
+  }
+
+  canBuzz = false;
+
+  console.log("🔥 BUZZ ENVOYÉ :", playerName);
+
+  socket.emit("playerBuzz", playerName);
+
+  buzzer.src = "buzz2.png";
+
+  setTimeout(() => {
+  document.getElementById("buzzerContainer").style.display = "none";
+  showWaiting(); // ✅ AJOUT ICI
+}, 2000);
+}
+
+
+function showWaiting(){
+questionContainer.innerHTML =
+`<p class="waiting">Buzzer ou question à suivre...</p>`;
+}
+
+
+socket.onAny((event, ...args) => {
+  console.log("📡 SOCKET EVENT:", event, args);
+});
+
+
+
+buzzer.addEventListener("click", sendBuzz);
+
+function showBuzzScreen() {
+  console.log("BUZZ SCREEN");
+
+  currentQuestion = null;
+  canBuzz = true;
+
+  questionContainer.innerHTML =
+    `<p class="waiting">Tu buzze, bonne réponse, tu gagnes !</p>`;
+
+  // ✅ Affiche le buzzer seulement ici
+  document.getElementById("buzzerContainer").style.display = "block";
+  buzzer.style.display = "block";
+  buzzer.src = "buzz1.png";
+
+  validateBtn.style.display = "none";
+}
+/* ================= SOCKET ================= */
+
+socket.on('newQuestion', (q) => {
+
+  currentQuestion = q;
+  selectedOption = null;
+
+  renderQuestion(q);
+
+  validateBtn.style.display = 'inline-block';
+  validateBtn.disabled = true;
+});
+
+socket.on('startBuzzQuestion', showBuzzScreen);
+socket.on('showMediaExplanation2', showBuzzScreen);
+
+/* ================= RENDER ================= */
+
+function renderQuestion(q) {
+
+  let html = `<div class="question">${q.question}</div><div class="options">`;
+
+  q.options.forEach(opt => {
+    html += `<div class="option">${opt}</div>`;
+  });
+
+  html += '</div>';
+
+  questionContainer.innerHTML = html;
+
+  document.querySelectorAll('.option').forEach(el => {
+    el.addEventListener('click', () => {
+
+      document.querySelectorAll('.option')
+        .forEach(o => o.classList.remove('selected'));
+
+      el.classList.add('selected');
+      selectedOption = el;
+
+      validateBtn.disabled = false;
+    });
+  });
+}
+
+/* ================= ANSWER FIX IMPORTANT ================= */
+
+validateBtn.addEventListener('click', () => {
+
+  if (!currentQuestion || !selectedOption) return;
+
+  const selectedText = selectedOption.textContent.trim();
+  const correct = selectedText === currentQuestion.answer;
+
+  selectedOption.classList.add(correct ? 'correct' : 'incorrect');
+
+  console.log("SEND ANSWER:", {
+    playerName,
+    selectedText,
+    correct
+  });
+
+  socket.emit('answer', {
+    playerName: playerName || "unknown",
+    answer: selectedText,
+    correct
+  });
+
+  validateBtn.disabled = true;
+
+  setTimeout(() => {
+    questionContainer.innerHTML = `<p class="waiting">Buzzer ou question à suivre...</p>`;
+    validateBtn.style.display = 'none';
+
+    currentQuestion = null;
+    selectedOption = null;
+  }, 1000);
+});
+</script>
+
+</body>
+</html>

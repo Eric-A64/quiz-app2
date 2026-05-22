@@ -1,0 +1,71 @@
+{
+  "A-cartoon-TV": [
+
+{
+      "type": "video",
+      "mediaExplanation2": "A-cartoon-tv/video/gadget.mp4",
+      "answer": "INSPECTEUR GADGET",
+      "mediaAnswer2": "A-cartoon-tv/video/gadget2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/mario.mp4",
+      "answer": "SUPER MARIO",
+      "mediaAnswer2": "A-CinemaINT/video/mario2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cartoon-tv/video/candy.mp4",
+      "answer": "CANDY",
+      "mediaAnswer2": "A-cartoon-tv/video/candy2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cartoon-tv/audio/goldorak.mp3",
+      "mediaImage": "A-SEXY-quiz/q3.gif",
+      "answer": "GOLDORAK",
+      "mediaAnswer2": {
+        "audio": "A-cartoon-tv/audio/goldorak2.mp3",
+        "image": "A-cartoon-tv/img/goldorak.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cartoon-tv/audio/panthere.mp3",
+      "mediaImage": "A-SEXY-quiz/q2.gif",
+      "answer": "LA PANTHERE ROSE",
+      "mediaAnswer2": {
+        "audio": "A-cartoon-tv/audio/panthere2.mp3",
+        "image": "A-cartoon-tv/img/panthere.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cartoon-tv/video/zinzin.mp4",
+      "answer": "LES ZINZINS DE L'ESPACE",
+      "mediaAnswer2": "A-cartoon-tv/video/zinzin.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cartoon-tv/audio/pokemon.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "POKEMON",
+      "mediaAnswer2": {
+        "audio": "A-cartoon-tv/audio/pokemon2.mp3",
+        "image": "A-cartoon-tv/img/pokemon.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/tetris.mp4",
+      "answer": "TETRIS",
+      "mediaAnswer2": "A-CinemaINT/video/tetris2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

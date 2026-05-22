@@ -1,0 +1,162 @@
+{
+  "A-Serie-TV-2": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/soda.mp4",
+      "answer": "SODA",
+      "mediaAnswer2": "A-Serie-TV/video/soda2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/casadepapel.mp4",
+      "answer": "LA CASA DE PAPEL",
+      "mediaAnswer2": "A-Serie-TV/video/casadepapel2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/cafe.mp4",
+      "answer": "CAMERA CAFE",
+      "mediaAnswer2": "A-Serie-TV/video/cafe2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/kaamelott.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "KAMELOTT",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/kaamelott2.mp3",
+        "image": "A-Serie-TV/img/kaamelott2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/malcom.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "MALCOM",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/malcom2.mp3",
+        "image": "A-Serie-TV/img/malcom2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/squid.mp4",
+      "answer": "SQUID GAME",
+      "mediaAnswer2": "A-Serie-TV/video/squid2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/helene.mp4",
+      "answer": "HELENE ET LES GARCONS",
+      "mediaAnswer2": "A-Serie-TV/video/helene2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/game.mp4",
+      "answer": "GAME OF THRONES",
+      "mediaAnswer2": "A-Serie-TV/video/game2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/prison.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "PRISON BREAK",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/prison2.mp3",
+        "image": "A-Serie-TV/img/prison2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/schultz.mp4",
+      "answer": "PAPA SCHULTZ",
+      "mediaAnswer2": "A-Serie-TV/video/shultz.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/sexandthe.mp4",
+      "answer": "SEX AND THE CITY",
+      "mediaAnswer2": "A-Serie-TV/video/sexandthe2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/ungarsunefille.mp4",
+      "answer": "UN GARS UNE FILLE",
+      "mediaAnswer2": "A-Serie-TV/video/ungarsunefille2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/ncis.mp3",
+      "mediaImage": "A-SEXY-quiz/q6.gif",
+      "answer": "N C I S",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/ncis2.mp3",
+        "image": "A-Serie-TV/img/ncis.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/cold-case.mp3",
+      "mediaImage": "A-SEXY-quiz/q6.gif",
+      "answer": "COLD CASE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/cold-case2.mp3",
+        "image": "A-Serie-TV/img/cold-case2.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/buffy.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "BUFFY CONTRE LES VAMPIRES",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/buffy2.mp3",
+        "image": "A-Serie-TV/img/buffy3.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/esprit.mp3",
+      "mediaImage": "A-SEXY-quiz/q2.gif",
+      "answer": "ESPRITS CRIMINELS",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/esprit2.mp3",
+        "image": "A-Serie-TV/img/esprit2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/menage.mp4",
+      "answer": "SCENE DE MENAGE",
+      "mediaAnswer2": "A-Serie-TV/video/menage2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/ungarsunefille.mp4",
+      "answer": "UN GARS - UNE FILLE",
+      "mediaAnswer2": "A-Serie-TV/video/ungarsunefille2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/friends.mp4",
+      "answer": "FRIENDS",
+      "mediaAnswer2": "A-Serie-TV/video/friends2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/bones.mp3",
+      "mediaImage": "A-SEXY-quiz/q3.gif",
+      "answer": "BONES",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/bones2.mp3",
+        "image": "A-Serie-TV/img/bones2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

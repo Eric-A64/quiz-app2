@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Écran Quiz - Screen Aligné BUZADMIN</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            overflow: hidden;
+
+            background: linear-gradient(
+                270deg,
+                #42EB42,
+                #92159E,
+                #EBD242,
+                #A03AB0,
+                #4B1678,
+                #C27936
+            );
+
+            background-size: 800% 800%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        body.static-bg {
+            animation: none !important;
+        }
+
+        body.correct-answer {
+            background: linear-gradient(
+                270deg,
+                #FCD608,
+                #8CFF7A,
+                #FCD608,
+                #8CFF7A
+            );
+
+            background-size: 800% 800%;
+            animation: gradientMove 6s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 50% 0%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ================= TOP ================= */
+
+        #topBanner {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        #logoContainer img {
+            width: 150px;
+            animation: pulse 1s infinite;
+            margin-top: 10px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        /* ================= MAIN ================= */
+
+        #mainContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            flex-grow: 1;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        /* ================= QUESTION ================= */
+
+        #questionSection {
+            margin-top: 50px;
+
+            background-color: #C64ED9;
+            border-radius: 20px;
+            border: 15px solid #92159E;
+
+            font-size: 1.2rem;
+            padding: 30px;
+
+            width: 90%;
+            max-width: 1100px;
+            box-sizing: border-box;
+
+            box-shadow:
+                0 0 20px rgba(255,255,255,0.6),
+                0 0 40px rgba(255,255,255,0.3);
+        }
+
+        #optionsList {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        #optionsList li {
+            background-color: #92159E;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 2rem;
+            cursor: default;
+            user-select: none;
+
+            opacity: 0;
+
+            transition: opacity 0.45s ease, transform 0.45s ease;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #optionsList li.show {
+            opacity: 1;
+            transform: translate(0,0) rotate(360deg) scale(1) skew(10deg, 5deg);
+        }
+
+        /* ================= ANSWER ================= */
+
+        #answerSection {
+            display: none;
+
+            margin-top: 10px;
+
+            border-radius: 20px;
+            padding: 60px 40px;
+
+            width: 90%;
+            max-width: 1200px;
+
+            background-color: #92159E;
+            border: 15px solid #FFFFFF;
+
+            text-align: center;
+
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+
+            text-shadow: 0 0 5px black;
+        }
+
+        /* ================= SCORE ================= */
+
+        #scoreContainer {
+            position: fixed;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: #0D4054;
+            border: 8px solid #B38402;
+            border-radius: 15px;
+
+            width: 500px;
+            max-width: 800px;
+
+            z-index: 1000;
+
+            display: none;
+
+            box-shadow:
+                0 0 20px rgba(255,255,255,0.6),
+                0 0 40px rgba(255,255,255,0.3);
+        }
+
+        #scoreboard {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #A1A1A1;
+        }
+
+        #scoreboard table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #scoreboard th, #scoreboard td {
+            border: 3px solid #A03AB0;
+            padding: 8px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #scoreboard th {
+            background-color: #A03AB0;
+        }
+
+        /* ================= PODIUM ================= */
+
+        #podiumSection {
+            position: fixed;
+            inset: 0;
+
+            display: none;
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background: radial-gradient(circle at center,
+                rgba(20, 10, 40, 0.95),
+                rgba(0, 0, 0, 0.98)
+            );
+
+            z-index: 999999;
+        }
+
+        #podiumSection ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            width: 100%;
+            max-width: 500px;
+        }
+
+        #podiumSection li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 25px;
+            border-radius: 16px;
+
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        /* ================= MEDIA ================= */
+
+        #mediaExplanationContainer,
+        #mediaExplanation2Container,
+        #mediaAnswer2Container {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+        }
+
+        #mediaExplanationContainer img,
+        #mediaExplanationContainer video,
+        #mediaExplanation2Container img,
+        #mediaExplanation2Container video,
+        #mediaAnswer2Container img,
+        #mediaAnswer2Container video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ================= TIMER ================= */
+
+        #timerDisplay {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<audio id="globalAudio" preload="auto"></audio>
+
+<div id="topBanner">
+    <div id="logoContainer">
+        <img src="Mis-ROND150.png">
+    </div>
+</div>
+
+<div id="mainContent">
+
+    <div id="questionSection">
+        <h2 id="questionText">Question en attente...</h2>
+        <ul id="optionsList"></ul>
+
+        <div id="timerContainer">
+            <h3 id="timerDisplay">⏳ Temps restant : -- s</h3>
+        </div>
+    </div>
+
+    <div id="answerSection"></div>
+
+    <div id="scoreContainer">
+        <h2 style="text-align:center;">CLASSEMENT PROVISOIRE</h2>
+        <div id="scoreboard"></div>
+    </div>
+
+    <div id="podiumSection">
+        <h2>🏆 PODIUM</h2>
+        <ol id="podiumList"></ol>
+    </div>
+
+</div>
+
+<div id="mediaExplanationContainer"></div>
+<div id="mediaExplanation2Container"></div>
+<div id="mediaAnswer2Container"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/libs/qrcode.min.js"></script>
+
+<script>
+/* TON JS EST STRICTEMENT INCHANGÉ */
+</script>
+
+</body>
+</html>

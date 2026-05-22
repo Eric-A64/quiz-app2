@@ -1,0 +1,466 @@
+{
+  "type": "buzz",
+  "music": "culture/audio/cultureG.mp3",
+  "playlist": [
+    {
+  "media": "culture/1.png",
+  "answerMedia": {
+    "image": "culture/1.png"
+  }
+},
+    {
+      "media": "culture/1.png",
+      "answerMedia": {
+        "image": "culture/2.png"
+      }
+    },
+    {
+      "media": "culture/2.png",
+      "answerMedia": {
+        "image": "culture/3.png"
+      }
+    },
+    {
+      "media": "culture/3.png",
+      "answerMedia": {
+        "image": "culture/4.png"
+      }
+    },
+    {
+      "media": "culture/4.png",
+      "answerMedia": {
+        "image": "culture/5.png"
+      }
+    },
+    {
+      "media": "culture/5.png",
+      "answerMedia": {
+        "image": "culture/6.png"
+      }
+    },
+    {
+      "media": "culture/6.png",
+      "answerMedia": {
+        "image": "culture/7.png"
+      }
+    },
+    {
+      "media": "culture/7.png",
+      "answerMedia": {
+        "image": "culture/8.png"
+      }
+    },
+    {
+      "media": "culture/8.png",
+      "answerMedia": {
+        "image": "culture/9.png"
+      }
+    },
+    {
+      "media": "culture/9.png",
+      "answerMedia": {
+        "image": "culture/10.png"
+      }
+    },
+    {
+      "media": "culture/10.png",
+      "answerMedia": {
+        "image": "culture/11.png"
+      }
+    },
+    {
+      "media": "culture/11.png",
+      "answerMedia": {
+        "image": "culture/12.png"
+      }
+    },
+    {
+      "media": "culture/12.png",
+      "answerMedia": {
+        "image": "culture/13.png"
+      }
+    },
+    {
+      "media": "culture/13.png",
+      "answerMedia": {
+        "image": "culture/14.png"
+      }
+    },
+    {
+      "media": "culture/14.png",
+      "answerMedia": {
+        "image": "culture/15.png"
+      }
+    },
+    {
+      "media": "culture/15.png",
+      "answerMedia": {
+        "image": "culture/16.png"
+      }
+    },
+    {
+      "media": "culture/16.png",
+      "answerMedia": {
+        "image": "culture/17.png"
+      }
+    },
+    {
+      "media": "culture/17.png",
+      "answerMedia": {
+        "image": "culture/18.png"
+      }
+    },
+    {
+      "media": "culture/18.png",
+      "answerMedia": {
+        "image": "culture/19.png"
+      }
+    },
+    {
+      "media": "culture/19.png",
+      "answerMedia": {
+        "image": "culture/20.png"
+      }
+    },
+    {
+      "media": "culture/20.png",
+      "answerMedia": {
+        "image": "culture/21.png"
+      }
+    },
+    {
+      "media": "culture/21.png",
+      "answerMedia": {
+        "image": "culture/22.png"
+      }
+    },
+    {
+      "media": "culture/22.png",
+      "answerMedia": {
+        "image": "culture/23.png"
+      }
+    },
+    {
+      "media": "culture/23.png",
+      "answerMedia": {
+        "image": "culture/24.png"
+      }
+    },
+    {
+      "media": "culture/24.png",
+      "answerMedia": {
+        "image": "culture/25.png"
+      }
+    },
+    {
+      "media": "culture/25.png",
+      "answerMedia": {
+        "image": "culture/26.png"
+      }
+    },
+    {
+      "media": "culture/26.png",
+      "answerMedia": {
+        "image": "culture/27.png"
+      }
+    },
+    {
+      "media": "culture/27.png",
+      "answerMedia": {
+        "image": "culture/28.png"
+      }
+    },
+    {
+      "media": "culture/28.png",
+      "answerMedia": {
+        "image": "culture/29.png"
+      }
+    },
+    {
+      "media": "culture/29.png",
+      "answerMedia": {
+        "image": "culture/30.png"
+      }
+    },
+    {
+      "media": "culture/30.png",
+      "answerMedia": {
+        "image": "culture/31.png"
+      }
+    },
+    {
+      "media": "culture/31.png",
+      "answerMedia": {
+        "image": "culture/32.png"
+      }
+    },
+    {
+      "media": "culture/32.png",
+      "answerMedia": {
+        "image": "culture/33.png"
+      }
+    },
+    {
+      "media": "culture/33.png",
+      "answerMedia": {
+        "image": "culture/34.png"
+      }
+    },
+    {
+      "media": "culture/34.png",
+      "answerMedia": {
+        "image": "culture/35.png"
+      }
+    },
+    {
+      "media": "culture/35.png",
+      "answerMedia": {
+        "image": "culture/36.png"
+      }
+    },
+    {
+      "media": "culture/36.png",
+      "answerMedia": {
+        "image": "culture/37.png"
+      }
+    },
+    {
+      "media": "culture/37.png",
+      "answerMedia": {
+        "image": "culture/38.png"
+      }
+    },
+    {
+      "media": "culture/38.png",
+      "answerMedia": {
+        "image": "culture/39.png"
+      }
+    },
+    {
+      "media": "culture/39.png",
+      "answerMedia": {
+        "image": "culture/40.png"
+      }
+    },
+    {
+      "media": "culture/40.png",
+      "answerMedia": {
+        "image": "culture/41.png"
+      }
+    },
+    {
+      "media": "culture/41.png",
+      "answerMedia": {
+        "image": "culture/42.png"
+      }
+    },
+    {
+      "media": "culture/42.png",
+      "answerMedia": {
+        "image": "culture/43.png"
+      }
+    },
+    {
+      "media": "culture/43.png",
+      "answerMedia": {
+        "image": "culture/44.png"
+      }
+    },
+    {
+      "media": "culture/44.png",
+      "answerMedia": {
+        "image": "culture/45.png"
+      }
+    },
+    {
+      "media": "culture/45.png",
+      "answerMedia": {
+        "image": "culture/46.png"
+      }
+    },
+    {
+      "media": "culture/46.png",
+      "answerMedia": {
+        "image": "culture/47.png"
+      }
+    },
+    {
+      "media": "culture/47.png",
+      "answerMedia": {
+        "image": "culture/48.png"
+      }
+    },
+    {
+      "media": "culture/48.png",
+      "answerMedia": {
+        "image": "culture/49.png"
+      }
+    },
+    {
+      "media": "culture/49.png",
+      "answerMedia": {
+        "image": "culture/50.png"
+      }
+    },
+    {
+      "media": "culture/50.png",
+      "answerMedia": {
+        "image": "culture/51.png"
+      }
+    },
+    {
+      "media": "culture/51.png",
+      "answerMedia": {
+        "image": "culture/52.png"
+      }
+    },
+    {
+      "media": "culture/52.png",
+      "answerMedia": {
+        "image": "culture/53.png"
+      }
+    },
+    {
+      "media": "culture/53.png",
+      "answerMedia": {
+        "image": "culture/54.png"
+      }
+    },
+    {
+      "media": "culture/54.png",
+      "answerMedia": {
+        "image": "culture/55.png"
+      }
+    },
+    {
+      "media": "culture/55.png",
+      "answerMedia": {
+        "image": "culture/56.png"
+      }
+    },
+    {
+      "media": "culture/56.png",
+      "answerMedia": {
+        "image": "culture/57.png"
+      }
+    },
+    {
+      "media": "culture/57.png",
+      "answerMedia": {
+        "image": "culture/58.png"
+      }
+    },
+    {
+      "media": "culture/58.png",
+      "answerMedia": {
+        "image": "culture/59.png"
+      }
+    },
+    {
+      "media": "culture/59.png",
+      "answerMedia": {
+        "image": "culture/60.png"
+      }
+    },
+    {
+      "media": "culture/60.png",
+      "answerMedia": {
+        "image": "culture/61.png"
+      }
+    },
+    {
+      "media": "culture/61.png",
+      "answerMedia": {
+        "image": "culture/62.png"
+      }
+    },
+    {
+      "media": "culture/62.png",
+      "answerMedia": {
+        "image": "culture/63.png"
+      }
+    },
+    {
+      "media": "culture/63.png",
+      "answerMedia": {
+        "image": "culture/64.png"
+      }
+    },
+    {
+      "media": "culture/64.png",
+      "answerMedia": {
+        "image": "culture/65.png"
+      }
+    },
+    {
+      "media": "culture/65.png",
+      "answerMedia": {
+        "image": "culture/66.png"
+      }
+    },
+    {
+      "media": "culture/66.png",
+      "answerMedia": {
+        "image": "culture/67.png"
+      }
+    },
+    {
+      "media": "culture/67.png",
+      "answerMedia": {
+        "image": "culture/68.png"
+      }
+    },
+    {
+      "media": "culture/68.png",
+      "answerMedia": {
+        "image": "culture/69.png"
+      }
+    },
+    {
+      "media": "culture/69.png",
+      "answerMedia": {
+        "image": "culture/70.png"
+      }
+    },
+    {
+      "media": "culture/70.png",
+      "answerMedia": {
+        "image": "culture/71.png"
+      }
+    },
+    {
+      "media": "culture/71.png",
+      "answerMedia": {
+        "image": "culture/72.png"
+      }
+    },
+    {
+      "media": "culture/72.png",
+      "answerMedia": {
+        "video": "culture/video/73.mp4"
+      }
+    },
+    {
+      "media": "culture/video/73.mp4",
+      "answerMedia": {
+        "image": "culture/74.png"
+      }
+    },
+    {
+      "media": "culture/74.png",
+      "answerMedia": {
+        "image": "culture/75.png"
+      }
+    },
+    {
+      "media": "culture/75.png",
+      "answerMedia": {
+        "image": "culture/76.png"
+      }
+    },
+    {
+      "media": "culture/76.png",
+      "answerMedia": null
+    }
+  ]
+}

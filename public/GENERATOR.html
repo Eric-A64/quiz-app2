@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Générateur de Quiz Avancé</title>
+<style>
+  body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 80px; /* espace pour header fixe */
+  }
+
+  /* Header fixe */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .header-buttons button, .header-buttons a {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    color: white;
+  }
+
+  .header-buttons a {
+    background-color: #2ecc71;
+  }
+
+  .header-buttons a:hover { background-color: #27ae60; }
+  .header-buttons button { background-color: #2980b9; }
+  .header-buttons button:hover { background-color: #1f618d; }
+
+  /* Container principal */
+  #questions-container {
+    max-width: 700px;
+    margin: 20px auto;
+  }
+
+  .question-block { 
+    border: 2px solid #3498db; 
+    background-color: #ecf6fd;
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 10px;
+  }
+
+  label { display: block; margin: 5px 0; font-weight: bold; }
+  input[type="text"], select, input[type="number"] { 
+    width: 100%; 
+    padding: 6px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+  }
+
+  button.delete {
+    background-color: #e74c3c;
+  }
+  button.delete:hover {
+    background-color: #c0392b;
+  }
+
+  video, audio, img { 
+    max-width: 150px; 
+    margin: 5px 0; 
+    display: block;
+    border-radius: 5px;
+  }
+
+  textarea {
+    max-width: 700px;
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+  }
+
+  /* Champ catégorie centré */
+  #category-name {
+    max-width: 400px; 
+    margin: 10px auto; 
+    display: block;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Générateur de Quiz Avancé</h1>
+  <div class="header-buttons">
+    
+    <button onclick="addQuestion()">➕ Ajouter</button>
+    <button onclick="generateJSON()">📄 Générer JSON</button>
+  </div>
+</header>
+
+<label>Nom de la catégorie (racine JSON) :</label>
+<input type="text" id="category-name" placeholder="ex: cinéé">
+
+<div id="questions-container"></div>
+
+<h2 style="text-align:center;">JSON généré :</h2>
+<textarea id="json-output" rows="15"></textarea>
+
+<script>
+// -----------------------------
+// Toutes tes fonctions originales
+// -----------------------------
+let questions = [];
+const mediaFiles = {
+  img: ["photo1.jpg", "photo2.png", "norah.jpg"],
+  video: ["explication1.mp4", "explication2.mp4"],
+  audio: ["sound1.mp3", "sound2.mp3"]
+};
+
+function addQuestion() {
+  const index = questions.length;
+  questions.push({ question: "", options: ["", ""], correctIndex: 0, image: "", mediaExplanation: "" });
+  renderQuestion(index);
+}
+
+function renderQuestion(index) {
+  const container = document.getElementById('questions-container');
+  const div = document.createElement('div');
+  div.className = 'question-block';
+  div.id = 'question-' + index;
+
+  const imageOptions = mediaFiles.img.map(f => `<option value="${f}">${f}</option>`).join('');
+  const mediaOptions = [
+    ...mediaFiles.img.map(f => `<option value="${f}">${f}</option>`),
+    ...mediaFiles.video.map(f => `<option value="${f}">${f}</option>`),
+    ...mediaFiles.audio.map(f => `<option value="${f}">${f}</option>`),
+  ].join('');
+
+  div.innerHTML = `
+    <h3>Question ${index+1}</h3>
+    <label>Question :</label>
+    <input type="text" oninput="updateQuestion(${index}, this.value)">
+
+    <div id="options-${index}">
+      <label>Option 1 :</label>
+      <input type="text" oninput="updateOption(${index}, 0, this.value)">
+      <label>Option 2 :</label>
+      <input type="text" oninput="updateOption(${index}, 1, this.value)">
+    </div>
+    <button onclick="addOption(${index})">Ajouter une option</button>
+
+    <label>Index de la réponse correcte :</label>
+    <input type="number" min="0" value="0" oninput="updateCorrectIndex(${index}, this.value)">
+
+    <label>Image :</label>
+    <select onchange="selectMedia(${index}, 'image', this.value)">
+      <option value="">--Choisir une image--</option>
+      ${imageOptions}
+    </select>
+    <input type="file" accept="image/*" onchange="loadMediaFile(event, ${index}, 'image')">
+    <div id="preview-image-${index}"></div>
+
+    <label>Média d'explication :</label>
+    <select onchange="selectMedia(${index}, 'mediaExplanation', this.value)">
+      <option value="">--Choisir un média--</option>
+      ${mediaOptions}
+    </select>
+    <input type="file" accept="image/*,video/*,audio/*" onchange="loadMediaFile(event, ${index}, 'mediaExplanation')">
+    <div id="preview-media-${index}"></div>
+
+    <button class="delete" onclick="removeQuestion(${index})">Supprimer cette question</button>
+  `;
+
+  container.appendChild(div);
+}
+
+function updateQuestion(idx, value) { questions[idx].question = value; }
+function updateOption(idx,optIdx,value){questions[idx].options[optIdx]=value;}
+function addOption(idx){
+  questions[idx].options.push("");
+  const optionsDiv=document.getElementById(`options-${idx}`);
+  const optNumber=questions[idx].options.length;
+  const input=document.createElement('input');
+  input.type='text'; input.placeholder=`Option ${optNumber}`;
+  input.oninput=(e)=>updateOption(idx,optNumber-1,e.target.value);
+  optionsDiv.appendChild(document.createElement('br'));
+  optionsDiv.appendChild(input);
+}
+function updateCorrectIndex(idx,value){questions[idx].correctIndex=parseInt(value);}
+function removeQuestion(idx){
+  questions.splice(idx,1);
+  document.getElementById('questions-container').innerHTML='';
+  questions.forEach((q,i)=>renderQuestion(i));
+}
+function selectMedia(idx, field, value){questions[idx][field]=value;previewMedia(idx,field,value);}
+function loadMediaFile(event, idx, field){
+  const file=event.target.files[0];
+  if(file){questions[idx][field]=file.name;previewMedia(idx,field,file.name,file);}
+}
+function previewMedia(idx, field, value, file=null){
+  const container=document.getElementById(`preview-${field}-${idx}`);
+  container.innerHTML=''; let element;
+  const getMediaPath=(filename)=>{
+    if(!filename)return undefined;
+    if(filename.match(/\.(jpg|jpeg|png|gif)$/i))return `img/${filename}`;
+    if(filename.match(/\.(mp4|webm|ogg)$/i))return `video/${filename}`;
+    if(filename.match(/\.(mp3|wav|ogg)$/i))return `audio/${filename}`;
+    return filename;
+  };
+  const srcPath=file?URL.createObjectURL(file):getMediaPath(value);
+  if(value.match(/\.(jpg|jpeg|png|gif)$/i)){element=document.createElement('img');element.src=srcPath;}
+  else if(value.match(/\.(mp4|webm|ogg)$/i)){element=document.createElement('video');element.controls=true;element.src=srcPath;}
+  else if(value.match(/\.(mp3|wav|ogg)$/i)){element=document.createElement('audio');element.controls=true;element.src=srcPath;}
+  if(element)container.appendChild(element);
+}
+function generateJSON(){
+  const categoryName=document.getElementById('category-name').value||"categorie";
+  const getMediaPath=(filename)=>{
+    if(!filename)return undefined;
+    if(filename.match(/\.(jpg|jpeg|png|gif)$/i))return `img/${filename}`;
+    if(filename.match(/\.(mp4|webm|ogg)$/i))return `video/${filename}`;
+    if(filename.match(/\.(mp3|wav|ogg)$/i))return `audio/${filename}`;
+    return filename;
+  };
+  const formattedQuestions=questions.map(q=>({
+    question:q.question,
+    options:q.options,
+    answer:q.options[q.correctIndex]||"",
+    correctIndex:q.correctIndex,
+    image:getMediaPath(q.image),
+    mediaExplanation:getMediaPath(q.mediaExplanation)
+  }));
+  const jsonData={ [categoryName]: formattedQuestions };
+  document.getElementById('json-output').value=JSON.stringify(jsonData,null,2);
+}
+</script>
+
+</body>
+</html>

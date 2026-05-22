@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>BUZZ ADMIN CLEAN</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 20px;
+  max-width: 1000px;
+}
+
+#headerRow {
+  display:flex;
+  justify-content:space-between;
+  background:#FFA8F2;
+  padding:10px;
+  border-radius:10px;
+  color:white;
+}
+
+#mainContainer {
+  display:flex;
+  gap:20px;
+  margin-top:20px;
+}
+
+.panel {
+  flex:1;
+  border-radius:10px;
+  padding:10px;
+  border:2px solid #ddd;
+  min-height:300px;
+}
+
+.current { border-color:#8b2cbf; }
+.next { border-color:#22c55e; }
+
+img, video {
+  max-width:100%;
+  margin-top:10px;
+}
+
+button, input {
+  padding:12px;
+  margin:5px;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.controls {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:20px;
+}
+
+button {
+  min-width:200px;
+}
+
+.debug {
+  background:#000;
+  color:#0f0;
+  font-size:12px;
+  padding:10px;
+  margin-top:10px;
+  white-space:pre-wrap;
+}
+</style>
+</head>
+
+<body>
+
+<div id="headerRow">
+  <h2>BUZZ ADMIN CLEAN</h2>
+  <input type="file" id="fileInput" accept=".json">
+</div>
+
+<div class="debug" id="debug">CHARGE UN JSON</div>
+
+<div id="mainContainer">
+
+  <div class="panel current">
+    <h3>MÉDIA ACTUEL</h3>
+    <div id="currentMedia"></div>
+  </div>
+
+  <div class="panel next">
+    <h3>MÉDIA SUIVANT</h3>
+    <div id="nextMedia"></div>
+  </div>
+
+</div>
+
+<div class="controls">
+  <button id="prevAnswer">⬅ BACK + SEND</button>
+  <button id="nextAnswer">NEXT + SEND ➡</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+let socket = io();
+
+let playlist = [];
+let index = 0;
+let bgMusic = null;
+
+const debug = document.getElementById("debug");
+const currentMedia = document.getElementById("currentMedia");
+const nextMedia = document.getElementById("nextMedia");
+
+const BASE_URL = "http://192.168.0.200:3000";
+
+function fixUrl(url) {
+  if (!url) return null;
+  if (url.startsWith("http")) return url;
+  return BASE_URL + url;
+}
+
+// =====================
+// BUILD PAYLOAD
+// =====================
+function buildMediaPayload(item) {
+  const raw = item?.answerMedia;
+
+  return {
+    type: "question",
+
+    media: {
+      image: raw?.image || null,
+      audio: raw?.audio || null,
+      video: raw?.video || null
+    },
+
+    forceAudio: !!raw?.audio
+  };
+}
+// =====================
+// LOAD JSON
+// =====================
+document.getElementById("fileInput").onchange = (e) => {
+
+  const file = e.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    try {
+      const data = JSON.parse(event.target.result);
+
+      playlist = data.playlist || [];
+      index = 0;
+
+      console.log("LOADED:", data);
+
+      // 🎵 musique de fond UNE SEULE FOIS
+      if (data.music) {
+  bgMusic = data.music;
+
+  socket.emit("showMediaAnswer2", {
+    type: "background",
+    media: {
+      audio: bgMusic
+    }
+  });
+}
+
+      render();
+
+    } catch (err) {
+      console.error("JSON ERROR:", err);
+      debug.innerText = "❌ JSON ERROR: " + err.message;
+    }
+  };
+
+  reader.onerror = () => {
+    debug.innerText = "❌ FILE ERROR";
+  };
+
+  reader.readAsText(file);
+};
+
+// =====================
+// NEXT
+// =====================
+document.getElementById("nextAnswer").onclick = () => {
+  const item = playlist[index];
+  if (!item) return;
+
+  const payload = buildMediaPayload(item);
+
+  console.log("SEND:", payload);
+
+  socket.emit("showMediaAnswer2", payload);
+
+  if (index < playlist.length - 1) index++;
+  render();
+};
+
+// =====================
+// BACK
+// =====================
+document.getElementById("prevAnswer").onclick = () => {
+  const item = playlist[index];
+  if (!item) return;
+
+  const payload = buildMediaPayload(item);
+
+  console.log("SEND:", payload);
+
+  socket.emit("showMediaAnswer2", payload);
+
+  if (index > 0) index--;
+  render();
+};
+
+// =====================
+// RENDER
+// =====================
+function render() {
+
+  const current = playlist[index];
+  const next = playlist[index + 1];
+
+  debug.innerText =
+    "INDEX: " + index +
+    "\nCURRENT:\n" + JSON.stringify(current, null, 2);
+
+  currentMedia.innerHTML = renderMedia(current?.media);
+  nextMedia.innerHTML = renderMedia(next?.media);
+}
+
+// =====================
+// MEDIA RENDER
+// =====================
+function renderMedia(m) {
+
+  if (!m) return "❌ VIDE";
+
+  if (typeof m === "string") {
+    if (m.includes(".mp4")) return `<video src="${m}" controls muted></video>`;
+    if (m.includes(".mp3")) return "🔇 AUDIO";
+    return `<img src="${m}">`;
+  }
+
+  if (typeof m === "object") {
+    if (m.image) return `<img src="${m.image}">`;
+    if (m.video) return `<video src="${m.video}" controls muted></video>`;
+    if (m.audio) return "🔊 AUDIO";
+  }
+
+  return "❌ FORMAT";
+}
+</script>
+
+</body>
+</html>

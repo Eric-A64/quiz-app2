@@ -1,0 +1,170 @@
+{
+  "A-cinemaFR": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/intro-dessins-animes.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "yellow-buzz.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/rabbit.mp4",
+      "answer": "ROGER RABBIT",
+      "mediaAnswer2": "A-DISNEY/video/rabbit2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/shrek.mp4",
+      "answer": "SHREK",
+      "mediaAnswer2": "A-DISNEY/video/shrek2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/7nains.mp4",
+      "answer": "BLANCHE NEIGE ET LES 7 NAINS",
+      "mediaAnswer2": "A-DISNEY/video/7nains2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-DISNEY/audio/alice.mp3",
+      "mediaImage": "A-DISNEY/img/alice.jpg",
+      "answer": "ALICE AU PAYS DES MERVEILLES",
+      "mediaAnswer2": {
+        "audio": "A-DISNEY/audio/alice2.mp3",
+        "image": "A-DISNEY/img/alice2.jpg"
+      }
+    },
+
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/jungle.mp4",
+      "answer": "LE LIVRE DE LA JUNGLE",
+      "mediaAnswer2": "A-DISNEY/video/jungle2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/roilion.mp4",
+      "answer": "LE ROI LION",
+      "mediaAnswer2": "A-DISNEY/video/roilion2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-DISNEY/video/sirene.mp4",
+      "mediaImage": "",
+      "answer": "LA PETITE SIRENE",
+      "mediaAnswer2": {
+        "audio": "A-DISNEY/audio/sirene2.mp3",
+        "image": "A-DISNEY/img/sirene.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-DISNEY/video/pocahontas.mp4",
+      "mediaImage": "",
+      "answer": "POCAHONTAS",
+      "mediaAnswer2": {
+        "audio": "A-DISNEY/audio/pocahontas2.mp3",
+        "image": "A-DISNEY/img/pocahontas.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/cendrillon.mp4",
+      "answer": "CENDRILLON",
+      "mediaAnswer2": "A-DISNEY/video/cendrillon2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-DISNEY/video/neige.mp4",
+      "mediaImage": "",
+      "answer": "LA REINE DES NEIGES",
+      "mediaAnswer2": {
+        "audio": "A-DISNEY/audio/neige2.mp3",
+        "image": "A-DISNEY/img/neige.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/vaiana.mp4",
+      "answer": "VAIANA",
+      "mediaAnswer2": "A-DISNEY/video/vaiana2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/aladin.mp4",
+      "answer": "ALADIN",
+      "mediaAnswer2": "A-DISNEY/video/aladin2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/toy.mp4",
+      "answer": "TOY STORY",
+      "mediaAnswer2": "A-DISNEY/video/toy2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/merlin.mp4",
+      "answer": "MERLIN L'ENCHANTEUR",
+      "mediaAnswer2": "A-DISNEY/video/merlin2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/belle.mp4",
+      "answer": "LA BELLE AU BOIS DORMANT",
+      "mediaAnswer2": "A-DISNEY/video/belle2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/bete.mp4",
+      "answer": "LA BELLE ET LA BETE",
+      "mediaAnswer2": "A-DISNEY/video/bete2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/rox.mp4",
+      "answer": "ROX ET ROUCKY",
+      "mediaAnswer2": "A-DISNEY/video/rox2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/jasmine.mp4",
+      "answer": "ALADIN - JASMINE",
+      "mediaAnswer2": "A-DISNEY/video/jasmine2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/101.mp4",
+      "answer": "101 DALMATIENS",
+      "mediaAnswer2": "A-DISNEY/video/1012.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-DISNEY/video/hakkuna.mp4",
+      "mediaImage": "",
+      "answer": "LE ROI LION",
+      "mediaAnswer2": {
+        "audio": "A-DISNEY/audio/hakkuna2.mp3",
+        "image": "A-DISNEY/img/roilion.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/chats.mp4",
+      "answer": "LES ARISTOCHATS",
+      "mediaAnswer2": "A-DISNEY/video/chats2.mp4"
+    },
+
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/mogly.mp4",
+      "answer": "LE LIVRE DE LA JUNGLE",
+      "mediaAnswer2": "A-DISNEY/video/mogly2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ /////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "A-Emission-TV": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/roilion.mp4",
+      "answer": "INTRO ////////////////////////",
+      "mediaAnswer2": "A-DISNEY/video/roilion2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/paroles.mp3",
+      "mediaImage": "A-SEXY-quiz/q3.gif",
+      "answer": "N'OUBLIEZ PAS LES PAROLES",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/paroles2.mp3",
+        "image": "A-Emission-TV/img/paroles.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/dormir.mp3",
+      "mediaImage": "A-SEXY-quiz/q5.gif",
+      "answer": "J'IRAI DORMIR CHEZ VOUS",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/dormir2.mp3",
+        "image": "A-Emission-TV/img/dormir.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Emission-TV/video/couche.mp4",
+      "answer": "ON EST PAS COUCHE",
+      "mediaAnswer2": "A-Emission-TV/video/couche2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/enfants.mp3",
+      "mediaImage": "A-SEXY-quiz/q1.gif",
+      "answer": "LES ENFANTS DE LA TELE",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/enfants2.mp3",
+        "image": "A-Emission-TV/img/enfants.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/academy.mp3",
+      "mediaImage": "A-SEXY-quiz/q4.gif",
+      "answer": "STAR ACADEMY",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/academy2.mp3",
+        "image": "A-Emission-TV/img/academy.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/boyard.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "FORT BOYARD",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/boyard2.mp3",
+        "image": "A-Emission-TV/img/boyard.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/grossestetes.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "LES GROSSES TÊTES",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/grossestetes2.mp3",
+        "image": "A-Emission-TV/img/grossestetes.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Emission-TV/video/zamours.mp4",
+      "answer": "LES ZAMOURS",
+      "mediaAnswer2": "A-Emission-TV/video/zamours2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/sorcier.mp3",
+      "mediaImage": "A-SEXY-quiz/q5.gif",
+      "answer": "C'EST PAS SORCIER",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/sorcier2.mp3",
+        "image": "A-Emission-TV/img/sorcier.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/casimir.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "L'ILE AUX ENFANTS",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/casimir2.mp3",
+        "image": "A-Emission-TV/img/casimir.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "4-ROCK-Music": [
+{
+      "type": "video",
+      "mediaExplanation2": "4-ROCK-Music/video/intro-rock1.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "4-ROCK-Music/video/rock-buzzer.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/alen.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "VAN HALEN - ERUPTION",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/alen2.mp3",
+        "image": "4-ROCK-Music/img/alen.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/zeppelin.mp3",
+      "mediaImage": "4-ROCK-Music/q2.gif",
+      "answer": "LED ZEPPELIN - WHOLE LOTTA LOVE",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/zeppelin2.mp3",
+        "image": "4-ROCK-Music/img/ledzep.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/haley.mp3",
+      "mediaImage": "4-ROCK-Music/q3.jpg",
+      "answer": "BILL HALEY - ROCK AROUND THE CLOCK",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/haley2.mp3",
+        "image": "4-ROCK-Music/img/haley.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/stones.mp3",
+      "mediaImage": "4-ROCK-Music/q4.gif",
+      "answer": "ROLLING STONES - SATISFACTION",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/stones2.mp3",
+        "image": "4-ROCK-Music/img/stones.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/dire.mp3",
+      "mediaImage": "4-ROCK-Music/q5.gif",
+      "answer": "DIRE STRAIT - MONEY FOR NOTHING",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/dire2.mp3",
+        "image": "4-ROCK-Music/img/dire.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/acdc.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "AC DC - BACK IN BLACK",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/acdc2.mp3",
+        "image": "4-ROCK-Music/img/acdc.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/beatles.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "THE BEATLES - HARD DAYS NIGHT",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/beatles2.mp3",
+        "image": "4-ROCK-Music/img/beatles.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/queen.mp3",
+      "mediaImage": "4-ROCK-Music/q3.jpg",
+      "answer": "QUEEN - CRAZY LITTLE THING CALLED LOVE",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/queen2.mp3",
+        "image": "4-ROCK-Music/img/queen.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/beach.mp3",
+      "mediaImage": "4-ROCK-Music/q2.gif",
+      "answer": "THE BEACH BOYS - I GET AROUND",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/beach2.mp3",
+        "image": "4-ROCK-Music/img/beachboys.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/elvis.mp3",
+      "mediaImage": "4-ROCK-Music/q3.gif",
+      "answer": "ELVIS PRESLEY - A LITTLE LESS CONVERSATION",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/elvis2.mp3",
+        "image": "4-ROCK-Music/img/elvis.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/telephone.mp3",
+      "mediaImage": "4-ROCK-Music/q4.gif",
+      "answer": "TELEPHONE - ARGENT TROP CHER",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/telephone2.mp3",
+        "image": "4-ROCK-Music/img/telephone.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/cure.mp3",
+      "mediaImage": "4-ROCK-Music/q5.gif",
+      "answer": "THE CURE - IN BETWEEN DAYS",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/cure2.mp3",
+        "image": "4-ROCK-Music/img/cure.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/collins.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "PHIL COLLINS - IN THE AIR TONIGHT",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/collins2.mp3",
+        "image": "4-ROCK-Music/img/collins.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/berry.mp3",
+      "mediaImage": "4-ROCK-Music/q3.jpg",
+      "answer": "CHUCK BERRY - JOHNNY B GOOD",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/berry2.mp3",
+        "image": "4-ROCK-Music/img/berry.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/police.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "THE POLICE - SO LONELY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/police2.mp3",
+        "image": "4-ROCK-Music/img/police.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/u2.mp3",
+      "mediaImage": "4-ROCK-Music/q5.gif",
+      "answer": "U2 - SUNDAY BLOODY SUNDAY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/u22.mp3",
+        "image": "4-ROCK-Music/img/u2.jpg"
+       }
+     },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/purple.mp3",
+      "mediaImage": "4-ROCK-Music/q3.gif",
+      "answer": "DEEP PURPLE - SMOKE ON THE WATHER",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/purple2.mp3",
+        "image": "4-ROCK-Music/img/purple.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/zztop.mp3",
+      "mediaImage": "4-ROCK-Music/q2.gif",
+      "answer": "ZZ TOP - GIMME ALL YOUR LOVIN'",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/zztop2.mp3",
+        "image": "4-ROCK-Music/img/zztop.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/trust.mp3",
+      "mediaImage": "4-ROCK-Music/q4.gif",
+      "answer": "TRUST - ANTISOCIAL",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/trust2.mp3",
+        "image": "4-ROCK-Music/img/trust.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/ramjam.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "RAM JAM - BLACK BETTY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/ramjam2.mp3",
+        "image": "4-ROCK-Music/img/ramjam.jpg"
+       }
+     },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/kiss.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "KISS - I WAS MADE FOR LOVIN' YOU",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/kiss2.mp3",
+        "image": "4-ROCK-Music/img/kiss.jpg"
+       }
+     },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/europe.mp3",
+      "mediaImage": "4-ROCK-Music/q2.gif",
+      "answer": "EUROPE - THE FINAL COUNTDOWN",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/europe2.mp3",
+        "image": "4-ROCK-Music/img/europe.jpg"
+       }
+     },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/joanjett.mp3",
+      "mediaImage": "4-ROCK-Music/q3.gif",
+      "answer": "JOAN JETT - I LOVE ROCK' N ROLL",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/joanjett2.mp3",
+        "image": "4-ROCK-Music/img/joanjett.jpg"
+       }
+     },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FINAL",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+
+  ]
+}

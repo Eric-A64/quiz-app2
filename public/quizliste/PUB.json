@@ -1,0 +1,36 @@
+{
+  "FANNY": [
+    {
+  "question": "********INTRO",
+  "options": [""],
+  "correctIndex": 0,
+  "mediaExplanation": "img/french-quiz1.jpg"
+},
+    {
+      "question": "Qui danse avec les loups",
+      "options": [
+        "Mel Gibson",
+        "Kevin Kostner",
+        "Brad Pitt",
+        "George Clooney"
+      ],
+      "answer": "Brad Pitt",
+      "correctIndex": 2,
+      "image": "img/eric.jpg",
+      "mediaExplanation": "video/SARA PERCHE TI AMO-ERIC-PAROLES.mp4"
+    },
+    {
+      "question": "Qui est vilain ?",
+      "options": [
+        "Le pape",
+        "Poutine",
+        "Trump",
+        "Macron"
+      ],
+      "answer": "Le pape",
+      "correctIndex": 0,
+      "image": "img/gilmour.JPG",
+      "mediaExplanation": "video/Maurice , le poisson rouge (version courte) (2001).mp4"
+    }
+  ]
+}

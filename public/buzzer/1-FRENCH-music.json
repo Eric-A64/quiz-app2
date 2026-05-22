@@ -1,0 +1,216 @@
+{
+  "1-FRENCH-music": [
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/intro-french1.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "yellow-buzz.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/nougaro.mp4",
+      "answer": "CLAUDE NOUGARO - NOUGAYORK",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/nougaro2.mp3",
+        "image": "1-FRENCH-music/img/nougaro2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/angele.mp4",
+      "answer": "ANGELE - LIBRE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/angele2.mp3",
+        "image": "1-FRENCH-music/img/angele2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/souchon.mp4",
+      "answer": "ALAIN SOUCHON - FOULE SENTIMENTALE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/souchon2.mp3",
+        "image": "1-FRENCH-music/img/souchon2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/axellered.mp4",
+      "answer": "AXEL RED - SENSUALITE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/axellered2.mp3",
+        "image": "1-FRENCH-music/img/axellered2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "1-FRENCH-music/audio/obispo.mp3",
+      "mediaImage": "1-FRENCH-music/img/q14.jpg",
+      "answer": "PASCAL OBISPO - TOMBE POUR ELLE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/obispo2.mp3",
+        "image": "1-FRENCH-music/img/obispo2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/daho.mp4",
+      "answer": "ETIENNE DAHO - COMME UN IGLOO",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/daho2.mp3",
+        "image": "1-FRENCH-music/img/daho2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/aznavour.mp4",
+      "answer": "CHARLES AZNAVOUR - JE M'VOYAIT DEJA",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/aznavour2.mp3",
+        "image": "1-FRENCH-music/img/aznavour2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/camelia.mp4",
+      "answer": "CAMELIA JORDANA - FACILE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/camelia2.mp3",
+        "image": "1-FRENCH-music/img/camelia2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/polnareff.mp4",
+      "answer": "MICHEL POLNAREFF - ON IRA TOUS AU PARADIS",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/polnareff2.mp3",
+        "image": "1-FRENCH-music/img/polnareff2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/l5.mp4",
+      "answer": "L5 - TOUTES LES FEMMES DE TA VIE",
+      "mediaAnswer2": "1-FRENCH-music/video/l52.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/aubert.mp4",
+      "answer": "JEAN LOUIS AUBERT - LES PLAGES",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/aubert2.mp3",
+        "image": "1-FRENCH-music/img/aubert2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/gyneco.mp4",
+      "answer": "DOC GYNECO - PASSEMENT DE JAMBES",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/gyneco2.mp3",
+        "image": "1-FRENCH-music/img/gyneco2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/pagny.mp4",
+      "answer": "FLORENT PAGNY - SI TU VEUX M'ESSAYER",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/pagny2.mp3",
+        "image": "1-FRENCH-music/img/pagny2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/starmania.mp4",
+      "answer": "STARMANIA - QUAND ON ARRIVE EN VILLE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/starmania2.mp3",
+        "image": "1-FRENCH-music/img/starmania2.jpg"
+      }
+    },    
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/hardy.mp4",
+      "answer": "FRANCOISE HARDY - COMMENT TE DIRE ADIEU",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/hardy2.mp3",
+        "image": "1-FRENCH-music/img/hardy2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/demoiselle.mp4",
+      "answer": "CHRISTOPHE MAE - BELLE DEMOISELLE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/demoiselle2.mp3",
+        "image": "1-FRENCH-music/img/demoiselle2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/calogero.mp4",
+      "answer": "CALOGERO - JE JOUE DE LA MUSIQUE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/calogero2.mp3",
+        "image": "1-FRENCH-music/img/calogero2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/lio.mp4",
+      "answer": "LIO - BANANA SPLIT",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/lio2.mp3",
+        "image": "1-FRENCH-music/img/lio2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "1-FRENCH-music/audio/bauer.mp3",
+      "mediaImage": "1-FRENCH-music/img/q1.jpg",
+      "answer": "AXEL BAUER - ETEINS LA LUMIERE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/bauer2.mp3",
+        "image": "1-FRENCH-music/img/bauer.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/respire.mp4",
+      "answer": "CLARA LUCIANI - RESPIRE ENCORE",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/respire2.mp3",
+        "image": "1-FRENCH-music/img/respire2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/mia.mp4",
+      "answer": "I AM - JE DANSE LE MIA",
+      "mediaAnswer2": {
+        "audio": "1-FRENCH-music/audio/mia2.mp3",
+        "image": "1-FRENCH-music/img/mia2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/boulette.mp4",
+      "answer": "DIAMS - LA BOULETTE",
+      "mediaAnswer2": "1-FRENCH-music/video/boulette2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "1-FRENCH-music/video/gabrielle.mp4",
+      "answer": "JOHNNY HALLYDAY - GABRIELLE",
+      "mediaAnswer2": "1-FRENCH-music/video/gabrielle2.mp4"
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ ///////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

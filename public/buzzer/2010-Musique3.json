@@ -1,0 +1,194 @@
+{
+  "2010-Musique3": [
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/intro-2010.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "yellow-buzz.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/stromae.mp4",
+      "answer": "STROMAE - PAPAOUTAI",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/stromae2.mp3",
+        "image": "2010-Musique3/img/stromae2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/coldplay.mp4",
+      "answer": "COLDPLAY - HYMN FOR THE WEEKEND",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/coldplay2.mp3",
+        "image": "2010-Musique3/img/coldplay2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/sheeran.mp4",
+      "answer": "ED SHEERAN - SHAPE OF YOU",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/sheeran2.mp3",
+        "image": "2010-Musique3/img/sheeran2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/sia.mp4",
+      "answer": "SIA - CHEAP THRILLS",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/sia2.mp3",
+        "image": "2010-Musique3/img/sia2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/feder.mp4",
+      "answer": "FEDER - GOODBYE",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/feder2.mp3",
+        "image": "2010-Musique3/img/feder2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/daftpunk.mp4",
+      "answer": "DAFT PUNK - GET LUCKY",
+      "mediaAnswer2": "2010-Musique3/video/daftpunk2.mp4"
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/jain.mp4",
+      "answer": "JAIN - COME",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/jain2.mp3",
+        "image": "2010-Musique3/img/jain2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/weeknd.mp4",
+      "answer": "THE WEEKND - I FEEL IT COMING",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/weeknd2.mp3",
+        "image": "2010-Musique3/img/weeknd2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/avener.mp4",
+      "answer": "THE AVENER - FADE OUT LINES",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/avener2.mp3",
+        "image": "2010-Musique3/img/avener2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/justin.mp4",
+      "answer": "JUSTIN TIMBERLAKE - CAN'T STOP THE FEELING",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/justin2.mp3",
+        "image": "2010-Musique3/img/justin2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/likkeli.mp4",
+      "answer": "LIKKE LI - I FOLLOW RIVERS",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/likkeli2.mp3",
+        "image": "2010-Musique3/img/likkeli2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/perry.mp4",
+      "answer": "KATY PERRY - CHAINED TO THE RYTHM",
+      "mediaAnswer2": "2010-Musique3/video/perry2.mp4"
+    },
+
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/enrique.mp4",
+      "answer": "ENRIQUE IGLESIAS - BAILANDO",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/enrique2.mp3",
+        "image": "2010-Musique3/img/enrique2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/shakira.mp4",
+      "answer": "SHAKIRA - LOCA",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/shakira2.mp3",
+        "image": "2010-Musique3/img/shakira2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/gims.mp4",
+      "answer": "GIMS - SAPE COMME JAMAIS",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/gims2.mp3",
+        "image": "2010-Musique3/img/gims2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/kendji.mp4",
+      "answer": "KENDJI - ME QUEMO",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/kendji2.mp3",
+        "image": "2010-Musique3/img/kendji2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/blackm.mp4",
+      "answer": "BLACK M - SUR MA ROUTE",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/blackm2.mp3",
+        "image": "2010-Musique3/img/blackm2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/amir.mp4",
+      "answer": "AMIR - ON DIRAIT",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/amir2.mp3",
+        "image": "2010-Musique3/img/amir2.jpg"
+      }
+    },
+        {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/zaz.mp4",
+      "answer": "ZAZ - JE VEUX",
+      "mediaAnswer2": "2010-Musique3/video/zaz2.mp4"
+    },
+        {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/magic.mp4",
+      "answer": "MAGIC SYSTEM - MAGIC IN THE AIR",
+      "mediaAnswer2": {
+        "audio": "2010-Musique3/audio/magic2.mp3",
+        "image": "2010-Musique3/img/magic2.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2010-Musique3/video/gangnam.mp4",
+      "answer": "GANGNAM STYLE",
+      "mediaAnswer2": "2010-Musique3/video/gangnam2.mp4"
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ ///////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

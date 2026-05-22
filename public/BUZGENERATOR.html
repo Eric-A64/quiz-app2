@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Buzz Dynamic Asset Resolver</title>
+
+<style>
+body { font-family: Arial; margin:0; padding-top:120px; background:#f4f6f9; }
+
+header {
+  position:fixed;
+  top:0; left:0; right:0;
+  height:70px;
+  background:#3498db;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+}
+
+.config {
+  position:fixed;
+  top:70px;
+  left:0;
+  right:0;
+  background:#fff;
+  padding:10px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  border-bottom:1px solid #ddd;
+}
+
+.question {
+  max-width:900px;
+  margin:15px auto;
+  background:#eaf4ff;
+  border:2px solid #3498db;
+  border-radius:10px;
+  padding:15px;
+}
+
+.block {
+  background:white;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+}
+
+.tab { display:none; }
+.tab.active { display:block; }
+
+.tab-buttons button {
+  background:#2980b9;
+  color:white;
+  margin:2px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎧 Dynamic Asset Resolver</h1>
+  <div>
+    <button onclick="addQ()">➕</button>
+    <button onclick="gen()">📄 JSON</button>
+  </div>
+</header>
+
+<div class="config">
+  <strong>Mapping réel (pas de public/)</strong>
+  <code>img / audio / video</code>
+</div>
+
+<input id="cat" placeholder="buzz"
+style="display:block;margin:10px auto;width:300px;">
+
+<div id="c"></div>
+
+<textarea id="out" style="width:90%;height:200px;display:block;margin:20px auto;"></textarea>
+
+<script>
+
+/* =======================
+   MAPPING RÉEL DU PROJET
+======================= */
+const ASSET_FOLDERS = {
+  image: "img",
+  audio: "audio",
+  video: "video"
+};
+
+/* =======================
+   DATA
+======================= */
+let q=[];
+
+/* =======================
+   RESOLVE FILE PATH
+======================= */
+function resolve(type, file){
+  return file.name; // IMPORTANT : PAS DE CHEMIN FORCÉ
+}
+
+/* =======================
+   DETECT TYPE
+======================= */
+function detect(file){
+  if(file.type.startsWith("image")) return "image";
+  if(file.type.startsWith("audio")) return "audio";
+  if(file.type.startsWith("video")) return "video";
+}
+
+/* =======================
+   ADD
+======================= */
+function addQ(){
+  q.push({
+    type:"audio",
+    mediaExplanation2:"",
+    mediaImage:"",
+    answer:"",
+    mediaAnswer2:null
+  });
+  render();
+}
+
+/* =======================
+   RENDER
+======================= */
+function render(){
+  const c=document.getElementById("c");
+  c.innerHTML="";
+
+  q.forEach((x,i)=>{
+
+    c.innerHTML+=`
+    <div class="question">
+
+      <h3>Question ${i+1}</h3>
+
+      <div class="block">
+        <label>mediaExplanation2 (audio/video)</label>
+        <input type="file" onchange="setQ(event,${i})">
+      </div>
+
+      <div class="block">
+        <label>mediaImage (image)</label>
+        <input type="file" accept="image/*"
+          onchange="setImg(event,${i})">
+      </div>
+
+      <div class="block">
+        <label>answer</label>
+        <input oninput="q[${i}].answer=this.value">
+      </div>
+
+      <div class="block">
+        <label>mediaAnswer2.audio</label>
+        <input type="file" accept="audio/*"
+          onchange="setA(event,${i})">
+      </div>
+
+      <div class="block">
+        <label>mediaAnswer2.image</label>
+        <input type="file" accept="image/*"
+          onchange="setAi(event,${i})">
+      </div>
+
+      <div class="block">
+        <label>mediaAnswer2 (video)</label>
+        <input type="file" accept="video/*"
+          onchange="setAv(event,${i})">
+      </div>
+
+    </div>`;
+  });
+}
+
+/* =======================
+   QUESTION MEDIA
+======================= */
+function setQ(e,i){
+  const f=e.target.files[0];
+  q[i].mediaExplanation2 = f.name;
+}
+
+/* =======================
+   IMAGE
+======================= */
+function setImg(e,i){
+  const f=e.target.files[0];
+  q[i].mediaImage = f.name;
+}
+
+/* =======================
+   AUDIO ANSWER
+======================= */
+function setA(e,i){
+  const f=e.target.files[0];
+
+  if(!q[i].mediaAnswer2) q[i].mediaAnswer2={};
+
+  q[i].mediaAnswer2.audio = f.name;
+}
+
+/* =======================
+   IMAGE ANSWER
+======================= */
+function setAi(e,i){
+  const f=e.target.files[0];
+
+  if(!q[i].mediaAnswer2) q[i].mediaAnswer2={};
+
+  q[i].mediaAnswer2.image = f.name;
+}
+
+/* =======================
+   VIDEO ANSWER
+======================= */
+function setAv(e,i){
+  const f=e.target.files[0];
+  q[i].mediaAnswer2 = f.name;
+}
+
+/* =======================
+   GENERATE
+======================= */
+function gen(){
+  const name=document.getElementById("cat").value||"buzz";
+
+  const json={
+    [name]: q,
+    assetMap: ASSET_FOLDERS
+  };
+
+  document.getElementById("out").value =
+    JSON.stringify(json,null,2);
+}
+
+/* INIT */
+addQ();
+
+</script>
+
+</body>
+</html>

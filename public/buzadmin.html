@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BUZZ Admin - Quiz interactif</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 900px;
+        }
+
+        video,
+        img {
+            max-width: 300px;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button,
+        select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        #qrcode {
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            width: 180px;
+            height: 180px;
+        }
+
+        #qrcode canvas,
+        #qrcode svg {
+            width: 180px !important;
+            height: 180px !important;
+            display: block;
+        }
+
+        #scoreboard {
+            margin-top: 30px;
+            padding: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: #f0f8ff;
+        }
+
+        #scoreboard table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #scoreboard th,
+        #scoreboard td {
+            border: 1px solid #007BFF;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #scoreboard th {
+            background-color: #8b2cbf;
+            color: white;
+        }
+
+        #scoreContainer {
+            background-color: #FD9EFF;
+            border-radius: 20px;
+            max-width: 400px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 400px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        #headerRow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 510px;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #FFA8F2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        #previewContainer {
+            background-color: #FFA8F2;
+            border-radius: 10px;
+            position: fixed;
+            top: 20px;
+            right: 450px;
+            width: 500px;
+            min-height: 320px;
+            z-index: 999;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        #livePreview {
+            background: #111;
+            min-height: 260px;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="headerRow">
+
+    <div id="logoContainer">
+        <img src="Mis-ROND90.png" />
+        <h3>BUZ-ADMIN</h3>
+    </div>
+
+    <div id="quizDiv">
+        <select id="quizSelect"></select>
+
+        <button id="loadSelectedQuiz"
+            style="background-color:#AFFF03; color:black;">
+            LOAD
+        </button>
+
+        <div style="margin-top:10px; width:200px; background:#ddd; border-radius:8px; overflow:hidden;">
+            <div id="preloadBar"
+                 style="height:10px; width:0%; background:#78F07E;"></div>
+        </div>
+
+        <div id="preloadStatus" style="font-size:12px; margin-top:5px;">
+            QUIZ NOT LOADED
+        </div>
+    </div>
+</div>
+
+<div id="previewContainer">
+    <h3>🎬 PREVIEW SCREEN</h3>
+    <div id="livePreview"></div>
+
+    <button id="quizFlowBtn">▶ START QUIZ</button>
+    <button id="resetQuizBtn">🔄 RESET QUIZ</button>
+
+    <button id="endQuizBtn">🏆 PODIUM OFF</button>
+
+    <h3>URL joueurs :</h3>
+    <p id="playerURL"></p>
+    <div id="qrcode"></div>
+</div>
+
+<div id="questionCounter">QUESTION : 0</div>
+
+<div id="mainContainer">
+
+    <div id="questionsContainer">
+        <h2>BLIND-TEST</h2>
+        <div id="questionList"></div>
+
+        <div id="scoreContainer">
+            <h2>Validation Joueurs</h2>
+            <div id="buzzedPlayersList"></div>
+
+            <h2>CLASSEMENT</h2>
+
+            <button id="scoreScreenBtn">TOP-LIST</button>
+
+            <div>👥 <span id="playerCount">0</span></div>
+
+            <button onclick="resetLobby()">Reset Lobby</button>
+            <button id="resetScoresBtn">RESET SCORES</button>
+
+            <div id="scoreboard"></div>
+
+            <div id="podiumContainer">
+                <h2>🏆 Podium Final</h2>
+                <div id="podium">Podium en attente</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/qrcode.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+
+let socket;
+
+document.addEventListener('DOMContentLoaded', () => {
+
+socket = io();
+
+const playerUrl =
+    `${window.location.origin}/player.html`;
+
+document.getElementById('playerURL').textContent = playerUrl;
+
+new QRCode(document.getElementById("qrcode"), {
+    text: playerUrl,
+    width: 180,
+    height: 180
+});
+
+window.resetLobby = function () {
+    socket.emit("admin:resetLobby");
+};
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+{
+  "A-SEXY-quiz": [
+{
+      "type": "audio",
+      "mediaExplanation2": "1-yellow-court.mp3",
+      "mediaImage": "A-SEXY-quiz/img/sexyquizintro.jpg",
+      "answer": "INTRO SEXY QUIZ",
+      "mediaAnswer2": {
+        "audio": "",
+        "image": ""
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/marvin.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q1.jpg",
+      "answer": "MARVIN GAYE - SEXUAL HEALING",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/marvin2.mp3",
+        "image": "A-SEXY-quiz/img/marvin.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/donna.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q2.jpg",
+      "answer": "DONNA SUMMER - LOVE TO LOVE YOU BABY ",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/donna2.mp3",
+        "image": "A-SEXY-quiz/img/donna.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/shaggy.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q4.jpg",
+      "answer": "SHAGGY - HEY SEXY LADY",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/shaggy2.mp3",
+        "image": "A-SEXY-quiz/img/shaggy.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/sucettes.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q3.jpg",
+      "answer": "FRANCE GALL - LES SUCETTES",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/sucettes2.mp3",
+        "image": "A-SEXY-quiz/img/sucettes.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/seasexandsun.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q0.jpg",
+      "answer": "SERGE GAINSBOURG - SEA SEX AND SUN",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/seasexandsun2.mp3",
+        "image": "A-SEXY-quiz/img/seasexandsun.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/etienne.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q6.jpg",
+      "answer": "GUESCH PATTI - ETIENNE",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/etienne2.mp3",
+        "image": "A-SEXY-quiz/img/etienne.jpg"
+        }
+      },
+
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/madonna.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q7.jpg",
+      "answer": "MADONNA - JUSTIFY MY LOVE",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/madonna2.mp3",
+        "image": "A-SEXY-quiz/img/madonna.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/iwantyoursex.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q8.jpg",
+      "answer": "GEORGE MICHAEL - I WANT YOUR SEX",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/iwantyoursex2.mp3",
+        "image": "A-SEXY-quiz/img/yoursex.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-SEXY-quiz/video/etta.mp4",
+      "answer": "ETTA JAMES - I JUST WANT TO MAKE LOVE TO YOU",
+      "mediaAnswer2": "A-SEXY-quiz/video/coke.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/moinonplus.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q11.jpg",
+      "answer": "BIRKIN - GAINSBOURG - JE T'AIME MOI NON PLUS",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/moinonplus2.mp3",
+        "image": "A-SEXY-quiz/img/moinonplus.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/bascule.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q12.jpg",
+      "answer": "MARC LAVOINE - BASCULE AVEC MOI",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/bascule2.mp3",
+        "image": "A-SEXY-quiz/img/bascule.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/tribal.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q1.jpg",
+      "answer": "TRIBAL KING - FACON SEX",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/tribal2.mp3",
+        "image": "A-SEXY-quiz/img/tribal.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/daniela.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q2.jpg",
+      "answer": "ELMER FOOD BEAT - DANIELA",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/daniela2.mp3",
+        "image": "A-SEXY-quiz/img/daniela.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/alice.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q3.jpg",
+      "answer": "FRANCKY VINCENT - ALICE, CA GLISSE",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/alice2.mp3",
+        "image": "A-SEXY-quiz/img/alice.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/zizi.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q4.jpg",
+      "answer": "PIERRE PERRET - LE ZIZI",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/zizi2.mp3",
+        "image": "A-SEXY-quiz/img/zizi.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/katyperry.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q5.jpg",
+      "answer": "KATY PERRY - I KISSED A GIRL",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/katyperry2.mp3",
+        "image": "A-SEXY-quiz/img/katyperry.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/safesex.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q6.jpg",
+      "answer": "CALOGERO - SAFE SEX",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/safesex2.mp3",
+        "image": "A-SEXY-quiz/img/safesex.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/dianaross.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q7.jpg",
+      "answer": "DIANA ROSS - LOVE HANGOVER",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/dianaross2.mp3",
+        "image": "A-SEXY-quiz/img/diana.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-SEXY-quiz/audio/barrywhite.mp3",
+      "mediaImage": "A-SEXY-quiz/img/q8.jpg",
+      "answer": "BARRY WHITE - NEVER GONNA GIVE YA UP",
+      "mediaAnswer2": {
+        "audio": "A-SEXY-quiz/audio/barrywhite2.mp3",
+        "image": "A-SEXY-quiz/img/barrywhite.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-SEXY-quiz/video/stripkim.mp4",
+      "answer": "JOE COOCKER - YOU CAN LEAVE YOUR ",
+      "mediaAnswer2": "A-SEXY-quiz/video/kim.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

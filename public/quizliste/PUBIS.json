@@ -1,0 +1,17 @@
+{
+  "PUBIS2": [
+    {
+      "question": "qui fait quoi",
+      "options": [
+        "moi",
+        "toi",
+        "elle",
+        "Lui"
+      ],
+      "answer": "elle",
+      "correctIndex": 2,
+      "image": "img/Bee.jpg",
+      "mediaExplanation": "img/dark.jpg"
+    }
+  ]
+}

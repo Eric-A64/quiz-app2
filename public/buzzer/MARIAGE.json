@@ -1,0 +1,299 @@
+{
+  "MARIAGE": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/roilion.mp4",
+      "answer": "INTRO ////////////////////////",
+      "mediaAnswer2": "A-DISNEY/video/roilion2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/roilion.mp4",
+      "answer": "LE ROI LION",
+      "mediaAnswer2": "A-DISNEY/video/roilion2.mp4"
+    },
+
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/pirates.mp4",
+      "mediaImage": "",
+      "answer": "PIRATES DES CARAÏBES",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/pirates.mp3",
+        "image": "A-CinemaINT/img/pirates.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/amelie.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "Le fabuleux destin d'AMELIE POULAIN",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/amelie2.mp3",
+        "image": "A-cinemaFR/img/amelie.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cartoon-tv/video/gadget.mp4",
+      "answer": "INSPECTEUR GADGET",
+      "mediaAnswer2": "A-cartoon-tv/video/gadget2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/soda.mp4",
+      "answer": "SODA",
+      "mediaAnswer2": "A-Serie-TV/video/soda2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/mogly.mp4",
+      "answer": "LE LIVRE DE LA JUNGLE",
+      "mediaAnswer2": "A-DISNEY/video/mogly2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/cafe.mp4",
+      "answer": "CAMERA CAFE",
+      "mediaAnswer2": "A-DISNEY/video/cafe2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/rocky.mp4",
+      "answer": "ROCKY 3",
+      "mediaAnswer2": "A-CinemaINT/video/rocky3.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/titanic.mp4",
+      "answer": "TITANIC",
+      "mediaAnswer2": "A-CinemaINT/video/titanic2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/gardiens.mp4",
+      "answer": "LES GARDIENS DE LA GALAXIE",
+      "mediaAnswer2": "A-CinemaINT/video/gardiens2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/bond.mp4",
+      "answer": "JAMES BOND",
+      "mediaAnswer2": "A-CinemaINT/video/bond2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/kaamelott.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "KAMELOTT",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/kaamelott2.mp3",
+        "image": "A-Serie-TV/img/kaamelott.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/squid.mp4",
+      "answer": "SQUID GAME",
+      "mediaAnswer2": "A-Serie-TV/video/squid2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/cuisse.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "L'AILE ou LA CUISSE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/cuisse2.mp3",
+        "image": "A-cinemaFR/img/cuisse.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/mario.mp4",
+      "answer": "SUPER MARIO",
+      "mediaAnswer2": "A-CinemaINT/video/mario2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/mask.mp4",
+      "answer": "THE MASK",
+      "mediaAnswer2": "A-CinemaINT/video/mask2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/helene.mp4",
+      "answer": "HELENE ET LES GARCONS",
+      "mediaAnswer2": "A-Serie-TV/video/helene2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/game.mp4",
+      "answer": "GAME OF THRONES",
+      "mediaAnswer2": "A-Serie-TV/video/game2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cartoon-tv/video/candy.mp4",
+      "answer": "CANDY",
+      "mediaAnswer2": "A-cartoon-tv/video/candy2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/auberge.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "L'AUBERGE ESPAGNOLE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/auberge2.mp3",
+        "image": "A-cinemaFR/img/auberge.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/bronzes.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "LES BRONZES",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/bronzes2.mp3",
+        "image": "A-cinemaFR/img/bronzes.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/sorciere.mp4",
+      "answer": "MA SORCIERE BIEN AIMEE",
+      "mediaAnswer2": "A-Serie-TV/video/sorciere2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/superman.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "SUPERMAN",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/superman.mp3",
+        "image": "A-CinemaINT/img/superman.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/menage.mp4",
+      "answer": "SCENE DE MENAGE",
+      "mediaAnswer2": "A-Serie-TV/video/menage2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/paroles.mp3",
+      "mediaImage": "A-SEXY-quiz/q3.gif",
+      "answer": "N'OUBLIEZ PAS LES PAROLES",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/paroles2.mp3",
+        "image": "A-Emission-TV/img/paroles.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/ungarsunefille.mp4",
+      "answer": "UN GARS - UNE FILLE",
+      "mediaAnswer2": "A-Serie-TV/video/ungarsunefille2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/dormir.mp3",
+      "mediaImage": "A-SEXY-quiz/q5.gif",
+      "answer": "J'IRAI DORMIR CHEZ VOUS",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/dormir2.mp3",
+        "image": "A-Emission-TV/img/dormir.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Emission-TV/video/couche.mp4",
+      "answer": "ON EST PAS COUCHE",
+      "mediaAnswer2": "A-Emission-TV/video/couche2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/aladin.mp4",
+      "answer": "ALLADIN",
+      "mediaAnswer2": "A-DISNEY/video/aladin2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cartoon-tv/audio/pokemon.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "POKEMON",
+      "mediaAnswer2": {
+        "audio": "A-cartoon-tv/audio/pokemon2.mp3",
+        "image": "A-cartoon-tv/img/pokemon.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/soupeauxchoux.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "LA SOUPE AUX CHOUX",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/soupeauxchoux2.mp3",
+        "image": "A-cinemaFR/img/soupe2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/pulp.mp4",
+      "answer": "PULP FICTION",
+      "mediaAnswer2": "A-CinemaINT/video/pulp2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/tetris.mp4",
+      "answer": "TETRIS",
+      "mediaAnswer2": "A-CinemaINT/video/tetris2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/retour.mp4",
+      "answer": "RETOUR VERS LE FUTUR",
+      "mediaAnswer2": "A-CinemaINT/video/retour2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/sorcier.mp3",
+      "mediaImage": "A-SEXY-quiz/q5.gif",
+      "answer": "C'EST PAS SORCIER",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/sorcier2.mp3",
+        "image": "A-Emission-TV/img/sorcier.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/taratata.mp4",
+      "answer": "TARATATA",
+      "mediaAnswer2": "A-CinemaINT/video/taratata2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cinemaFR/video/rabbijacob.mp4",
+      "answer": "RABBIE JACOB",
+      "mediaAnswer2": "A-cinemaFR/video/rabbijacob2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/friends.mp4",
+      "answer": "FRIENDS",
+      "mediaAnswer2": "A-Serie-TV/video/friends2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/dirty.mp4",
+      "answer": "DIRTY DANCING",
+      "mediaAnswer2": "A-CinemaINT/video/dirty3.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

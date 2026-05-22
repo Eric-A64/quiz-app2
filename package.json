@@ -1,0 +1,21 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "screen": "electron main.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "express": "^5.1.0",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "electron": "^41.2.1"
+  }
+}

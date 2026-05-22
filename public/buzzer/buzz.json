@@ -1,0 +1,49 @@
+{
+  "buzz": [
+{
+      "type": "audio",
+      "mediaExplanation2": "audio/les mains d'or.mp3",
+      "mediaImage": "img/q25.gif",
+      "answer": "LAVILLIER",
+      "mediaAnswer2": {
+        "audio": "audio/les mains d'or2.mp3",
+        "image": "img/lavillier.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "audio/je ne suis pas un héros.mp3",
+      "mediaImage": "img/q27.gif",
+      "answer": "BALAVOINE",
+      "mediaAnswer2": {
+        "audio": "audio/je ne suis pas un héros2.mp3",
+        "image": "img/balavoine.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "video/CHTI.mp4",
+      "answer": "bienvenue chez les chti",
+      "mediaAnswer2": "video/dirty.mp4"
+    },
+{
+      "type": "image",
+      "mediaExplanation": "img/dark.jpg",
+      "answer": "star wars",
+      "mediaAnswer": "img/Bee.jpg"
+    },
+    {
+      "type": "audio",
+      "mediaExplanation": "audio/sept.mp3",
+      "answer": "septieme compagnie",
+      "mediaAnswer": "audio/Beds are Burning.mp3"
+    },
+    {
+      "type": "video",
+      "mediaExplanation": "video/reveil.mp4",
+      "answer": "Télé",
+      "mediaAnswer": "video/flash.mp4"
+    }
+    }
+  ]
+}

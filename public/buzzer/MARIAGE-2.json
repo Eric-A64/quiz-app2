@@ -1,0 +1,329 @@
+{
+  "MARIAGE-2": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/7nains.mp4",
+      "answer": "INTRO ////////////////////////",
+      "mediaAnswer2": "A-DISNEY/video/7nains2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-DISNEY/video/7nains.mp4",
+      "answer": "BLANCHE NEIGE ET LES 7 NAINS",
+      "mediaAnswer2": "A-DISNEY/video/7nains2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/enfants.mp3",
+      "mediaImage": "A-SEXY-quiz/q1.gif",
+      "answer": "LES ENFANTS DE LA TELE",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/enfants2.mp3",
+        "image": "A-Emission-TV/img/enfants.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cartoon-tv/audio/panthere.mp3",
+      "mediaImage": "A-SEXY-quiz/q2.gif",
+      "answer": "LA PANTHERE ROSE",
+      "mediaAnswer2": {
+        "audio": "A-cartoon-tv/audio/panthere2.mp3",
+        "image": "A-cartoon-tv/img/panthere.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/academy.mp3",
+      "mediaImage": "A-SEXY-quiz/q4.gif",
+      "answer": "STAR ACADEMY",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/academy2.mp3",
+        "image": "A-Emission-TV/img/academy.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/bones.mp3",
+      "mediaImage": "A-SEXY-quiz/q3.gif",
+      "answer": "BONES",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/bones2.mp3",
+        "image": "A-Serie-TV/img/bones.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/croisiere.mp3",
+      "mediaImage": "A-SEXY-quiz/q0.gif",
+      "answer": "LA CROISIERE S'AMUSE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/croisiere2.mp3",
+        "image": "A-Serie-TV/img/croisiere.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/madame.mp3",
+      "mediaImage": "A-SEXY-quiz/q6.gif",
+      "answer": "MADAME EST SERVIE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/madame2.mp3",
+        "image": "A-Serie-TV/img/madame.jpg"
+        }
+      },
+
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/prairie.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "LA PETITE MAISON DANS LA PRAIRIE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/prairie2.mp3",
+        "image": "A-Serie-TV/img/prairie.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/sexinthe.mp4",
+      "answer": "SEX IN THE CITY",
+      "mediaAnswer2": "A-Serie-TV/video/sexinthe2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-cartoon-tv/video/zinzin.mp4",
+      "answer": "LES ZINZINS DE L'ESPACE",
+      "mediaAnswer2": "A-cartoon-tv/video/zinzin.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/prison.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "PRISON BREAK",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/prison2.mp3",
+        "image": "A-Serie-TV/img/prison.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/amicalement.mp4",
+      "answer": "AMICALEMENT VOTRE",
+      "mediaAnswer2": "A-Serie-TV/video/amicalement.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/mission.mp4",
+      "answer": "MISSION IMPOSSIBLE",
+      "mediaAnswer2": "A-Serie-TV/video/mission.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/starsky.mp4",
+      "answer": "STARSKY ET HUTCH",
+      "mediaAnswer2": "A-Serie-TV/video/starsky.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/schultz.mp4",
+      "answer": "PAPA SCHULTZ",
+      "mediaAnswer2": "A-Serie-TV/video/shultz.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/helene.mp4",
+      "answer": "HELENE ET LES GARCONS",
+      "mediaAnswer2": "A-Serie-TV/video/helene.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/7compagnie.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "LA 7eme CONPAGNIE",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/7compagnie2.mp3",
+        "image": "A-cinemaFR/img/7compagnie.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/gendarme.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "LE GENDARME de SAINT TROPEZ",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/gendarme2.mp3",
+        "image": "A-cinemaFR/img/gendarme.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/agence.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "L'AGENCE TOUT RISQUE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/agence2.mp3",
+        "image": "A-Serie-TV/img/agence.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/dallas.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "DALLAS",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/dallas2.mp3",
+        "image": "A-Serie-TV/img/dallas.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/boyard.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "FORT BOYARD",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/boyard2.mp3",
+        "image": "A-Emission-TV/img/boyard.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/indiana.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "INDIANA JONES",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/indiana2.mp3",
+        "image": "A-CinemaINT/img/indiana.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/esprit.mp3",
+      "mediaImage": "A-SEXY-quiz/q2.gif",
+      "answer": "ESPRITS CRIMINELS",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/esprit2.mp3",
+        "image": "A-Serie-TV/img/esprit.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/cosmos.mp4",
+      "answer": "COSMOS 1999",
+      "mediaAnswer2": "A-Serie-TV/video/cosmos2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-DISNEY/video/neige.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "LA REINE DES NEIGES",
+      "mediaAnswer2": {
+        "audio": "A-DISNEY/audio/neige2.mp3",
+        "image": "A-DISNEY/img/neige.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cinemaFR/video/visiteurs.mp4",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "LES VISITEURS",
+      "mediaAnswer2": {
+        "audio": "A-cinemaFR/audio/visiteurs2.mp3",
+        "image": "A-cinemaFR/img/visiteurs.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/ncis.mp3",
+      "mediaImage": "A-SEXY-quiz/q6.gif",
+      "answer": "N C I S",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/ncis2.mp3",
+        "image": "A-Serie-TV/img/ncis.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/dames.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "DROLES DE DAMES",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/dames2.mp3",
+        "image": "A-Serie-TV/img/dames.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/grossestetes.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "LES GROSSES TÊTES",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/grossestetes2.mp3",
+        "image": "A-Emission-TV/img/grossestetes.jpg"
+        }
+      },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/buffy.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "BUFFY CONTRE LES VAMPIRES",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/buffy2.mp3",
+        "image": "A-Serie-TV/img/buffy.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/chapeau.mp4",
+      "answer": "CHAPEAU MELON ET BOTTES DE CUIR",
+      "mediaAnswer2": "A-Serie-TV/video/chapeau2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-cartoon-tv/audio/goldorak.mp3",
+      "mediaImage": "A-SEXY-quiz/q3.gif",
+      "answer": "GOLDORAK",
+      "mediaAnswer2": {
+        "audio": "A-cartoon-tv/audio/goldorak2.mp3",
+        "image": "A-cartoon-tv/img/goldorak.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/mysteres.mp3",
+      "mediaImage": "A-SEXY-quiz/q4.gif",
+      "answer": "LES MYSTERES DE L'OUEST",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/mysteres2.mp3",
+        "image": "A-Serie-TV/img/mysteres.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Emission-TV/video/zamours.mp4",
+      "answer": "LES ZAMOURS",
+      "mediaAnswer2": "A-Emission-TV/video/zamours2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/benny.mp4",
+      "answer": "BENNY HILL",
+      "mediaAnswer2": "A-Serie-TV/video/benny2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Emission-TV/audio/casimir.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "L'ILE AUX ENFANTS",
+      "mediaAnswer2": {
+        "audio": "A-Emission-TV/audio/casimir2.mp3",
+        "image": "A-Emission-TV/img/casimir.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

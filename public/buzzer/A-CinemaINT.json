@@ -1,0 +1,206 @@
+{
+  "A-cinemaFR": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/introcinemainternational.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "A-CinemaINT/video/century2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/ouest.mp4",
+      "mediaImage": "",
+      "answer": "IL ETAIT UNE FOIS DANS L'OUEST",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/ouest2.mp3",
+        "image": "A-CinemaINT/img/ouest.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/parrain.mp4",
+      "mediaImage": "",
+      "answer": "LE PARRAIN",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/parrain2.mp3",
+        "image": "A-CinemaINT/img/parrain.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/titanic.mp4",
+      "answer": "TITANIC",
+      "mediaAnswer2": "A-CinemaINT/video/titanic2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/gardiens.mp4",
+      "answer": "LES GARDIENS DE LA GALAXIE",
+      "mediaAnswer2": "A-CinemaINT/video/gardiens2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/superman.mp4",
+      "mediaImage": "",
+      "answer": "SUPERMAN",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/superman.mp3",
+        "image": "A-CinemaINT/img/superman.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/highlander.mp4",
+      "mediaImage": "",
+      "answer": "HIGHLANDER",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/highlander2.mp3",
+        "image": "A-CinemaINT/img/highlander.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/rocky.mp4",
+      "answer": "ROCKY 3",
+      "mediaAnswer2": "A-CinemaINT/video/rocky3.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/pirates.mp4",
+      "mediaImage": "",
+      "answer": "PIRATES DES CARAÏBES",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/pirates.mp3",
+        "image": "A-CinemaINT/img/pirates.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/apocalypse.mp4",
+      "mediaImage": "",
+      "answer": "APOCALYPSE NOW",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/apocalypse2.mp3",
+        "image": "A-CinemaINT/img/apocalypse.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/shark.mp4",
+      "mediaImage": "",
+      "answer": "LES DENTS DE LA MER",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/shark2.mp3",
+        "image": "A-CinemaINT/img/shark.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/indiana.mp4",
+      "mediaImage": "",
+      "answer": "INDIANA JONES",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/indiana2.mp3",
+        "image": "A-CinemaINT/img/indiana.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/topgun.mp4",
+      "mediaImage": "",
+      "answer": "TOP GUN",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/topgun2.mp3",
+        "image": "A-CinemaINT/img/topgun.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/pulp.mp4",
+      "answer": "PULP FICTION",
+      "mediaAnswer2": "A-CinemaINT/video/pulp2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/exorciste.mp4",
+      "mediaImage": "",
+      "answer": "L'EXORCISTE",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/exorciste2.mp3",
+        "image": "A-CinemaINT/img/exorciste.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/mask.mp4",
+      "answer": "THE MASK",
+      "mediaAnswer2": "A-CinemaINT/video/mask2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/forrest.mp4",
+      "mediaImage": "",
+      "answer": "FOREST GUMP",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/forrest2.mp3",
+        "image": "A-CinemaINT/img/forrest.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/jurassic.mp4",
+      "mediaImage": "",
+      "answer": "JURASSIC PARC",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/jurassic2.mp3",
+        "image": "A-CinemaINT/img/jurassic.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/bond.mp4",
+      "answer": "JAMES BOND",
+      "mediaAnswer2": "A-CinemaINT/video/bond2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/retour.mp4",
+      "answer": "RETOUR VERS LE FUTUR",
+      "mediaAnswer2": "A-CinemaINT/video/retour2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-CinemaINT/video/starwars.mp4",
+      "mediaImage": "",
+      "answer": "STAR WARS",
+      "mediaAnswer2": {
+        "audio": "A-CinemaINT/audio/starwars2.mp3",
+        "image": "A-CinemaINT/img/starwars.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/bodyguard.mp4",
+      "answer": "BODYGUARD",
+      "mediaAnswer2": "A-CinemaINT/video/bodyguard2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/grease.mp4",
+      "answer": "GREASE",
+      "mediaAnswer2": "A-CinemaINT/video/grease2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/dirty.mp4",
+      "answer": "DIRTY DANCING",
+      "mediaAnswer2": "A-CinemaINT/video/dirty3.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-CinemaINT/video/lion.mp4",
+      "answer": "METRO GOLDWIN MEYER + FIN DU QUIZZ ////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

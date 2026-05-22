@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Écran Quiz - Réponse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e40af;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: background-image 0.5s ease;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #questionSection {
+      background-color: #2563eb;
+      border-radius: 12px;
+      padding: 30px;
+      width: 90%;
+      max-width: 900px;
+      box-sizing: border-box;
+    }
+
+    #questionSection h2 { margin-top: 0; }
+
+    #optionsList {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    #optionsList li {
+      background-color: #3b82f6;
+      margin: 8px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: default;
+      user-select: none;
+    }
+
+    #answerSection {
+      display: none;
+      border-radius: 12px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 900px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+
+    #mediaExplanationContainer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #mediaExplanationContainer img,
+    #mediaExplanationContainer video {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    }
+
+    #podiumSection {
+      display: none;
+      border-radius: 12px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 600px;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #b8860b;
+      background-color: rgba(255, 248, 220, 0.9);
+      box-shadow: 0 0 15px #d4af37;
+      margin-top: 20px;
+    }
+
+    #podiumSection ol { padding-left: 0; list-style: none; margin: 0; }
+    #podiumSection li { margin: 15px 0; font-size: 1.8rem; text-shadow: 1px 1px 2px #6b4c00; }
+
+    #enableSoundMsg {
+      position: absolute;
+      top: 10px;
+      background: yellow;
+      color: black;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="enableSoundMsg">🔊 Cliquez n'importe où pour activer le son</div>
+
+  <div id="questionSection">
+    <h3 id="timerDisplay">⏳ Temps restant : -- s</h3>
+    <h2 id="questionText">En attente de question...</h2>
+    <ul id="optionsList"></ul>
+  </div>
+
+  <div id="mediaExplanationContainer"></div>
+
+  <div id="answerSection"></div>
+
+  <div id="podiumSection">
+    <h2>🏆 Podium Final 🏆</h2>
+    <ol id="podiumList">
+      <li>Aucun podium pour le moment.</li>
+    </ol>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+const socket = io();
+
+const questionSection = document.getElementById('questionSection');
+const questionText = document.getElementById('questionText');
+const optionsList = document.getElementById('optionsList');
+const answerSection = document.getElementById('answerSection');
+const timerDisplay = document.getElementById('timerDisplay');
+const podiumSection = document.getElementById('podiumSection');
+const podiumList = document.getElementById('podiumList');
+const mediaContainer = document.getElementById('mediaExplanationContainer');
+
+let lastQuestion = null;
+let countdownInterval = null;
+let invisibleMedia = null;   // pour question/réponse
+let mediaScreen = null;      // pour media screen visible
+let soundEnabled = false;
+
+document.body.addEventListener('click', () => {
+  if(!soundEnabled){soundEnabled=true;document.getElementById('enableSoundMsg').style.display='none';}
+});
+
+function stopInvisibleMedia(){
+  if(invisibleMedia){ invisibleMedia.pause?.(); invisibleMedia.src=''; invisibleMedia.load?.(); invisibleMedia.remove(); invisibleMedia=null; }
+}
+
+function stopMediaScreen(){
+  if(mediaScreen){ mediaScreen.pause?.(); mediaScreen.src=''; mediaScreen.load?.(); mediaScreen.remove(); mediaScreen=null; }
+}
+
+function startCountdown(seconds){
+  let timeLeft = seconds;
+  timerDisplay.textContent = `⏳ Temps restant : ${timeLeft}s`;
+  timerDisplay.style.display='block';
+  clearInterval(countdownInterval);
+  countdownInterval=setInterval(()=>{
+    timeLeft--;
+    timerDisplay.textContent=`⏳ Temps restant : ${timeLeft}s`;
+    if(timeLeft<=0){clearInterval(countdownInterval);timerDisplay.textContent='⏳ Temps écoulé !';}
+  },1000);
+}
+
+function playInvisibleMedia(url){
+  stopInvisibleMedia();
+  if(!url || !soundEnabled) return;
+  let media;
+  if(url.match(/\.(mp4|webm|ogg)$/i)){ media=document.createElement('video'); }
+  else if(url.match(/\.(mp3|wav|ogg)$/i)){ media=document.createElement('audio'); }
+  else return;
+  media.src=url;
+  media.autoplay=true;
+  media.style.display='none';
+  document.body.appendChild(media);
+  invisibleMedia = media;
+}
+
+function showMediaScreen(url){
+  stopMediaScreen();
+  mediaContainer.innerHTML='';
+  mediaContainer.style.display='flex';
+  if(!url) return;
+  let media;
+  if(url.match(/\.(mp4|webm|ogg)$/i)){
+    media=document.createElement('video'); media.src=url; media.autoplay=true; media.controls=true;
+  } else if(url.match(/\.(mp3|wav|ogg)$/i)){
+    media=document.createElement('audio'); media.src=url; media.autoplay=true; media.controls=true;
+  } else { media=document.createElement('img'); media.src=url; }
+  mediaContainer.appendChild(media);
+  mediaScreen = media;
+}
+
+mediaContainer.addEventListener('click', ()=>{
+  mediaContainer.style.display='none';
+  stopMediaScreen();
+});
+
+// =========================
+// Socket events
+// =========================
+socket.on('newQuestion', q=>{
+  lastQuestion=q;
+  podiumSection.style.display='none';
+  questionSection.style.display='block';
+  answerSection.style.display='none';
+  questionText.textContent=q.question;
+  optionsList.innerHTML='';
+  q.options.forEach(opt=>{ const li=document.createElement('li'); li.textContent=opt; optionsList.appendChild(li); });
+  startCountdown(20);
+  stopMediaScreen();
+  mediaContainer.style.display='none';
+  playInvisibleMedia(q.mediaQuestion);
+});
+
+socket.on('showCorrectAnswer', idx=>{
+  clearInterval(countdownInterval);
+  questionSection.style.display='none';
+  answerSection.style.display='block';
+  if(lastQuestion && lastQuestion.options[idx]) answerSection.textContent=`✅ Bonne réponse : ${lastQuestion.options[idx]}`;
+  stopMediaScreen();
+  mediaContainer.style.display='none';
+  playInvisibleMedia(lastQuestion.mediaAnswer);
+});
+
+socket.on('showMediaExplanation', url=>{
+  showMediaScreen(url);
+});
+
+socket.on('clearMediaExplanation', ()=>{
+  mediaContainer.style.display='none';
+  stopMediaScreen();
+});
+
+socket.on('showPodium', podium=>{
+  questionSection.style.display='none';
+  answerSection.style.display='none';
+  mediaContainer.style.display='none';
+  stopInvisibleMedia();
+  stopMediaScreen();
+  if(!podium || podium.length===0) podiumList.innerHTML='<li>Aucun podium pour le moment.</li>';
+  else podiumList.innerHTML=podium.map(({playerName,score},i)=>`<li><strong>${i+1}.</strong> ${playerName} — ${score} point${score>1?'s':''}</li>`).join('');
+  podiumSection.style.display='block';
+});
+
+// =========================
+// QR code
+// =========================
+function hideQR(){ const qr=document.getElementById('qrOverlay'); if(qr) qr.remove(); }
+
+socket.on('showQRCodeOnScreen', (url)=>{
+  hideQR();
+  questionSection.style.display='none';
+  answerSection.style.display='none';
+  podiumSection.style.display='none';
+
+  const qrContainer=document.createElement('div');
+  qrContainer.id='qrOverlay';
+  qrContainer.style.position='fixed';
+  qrContainer.style.top=0; qrContainer.style.left=0; qrContainer.style.width='100vw'; qrContainer.style.height='100vh';
+  qrContainer.style.background='rgba(0,0,0,0.85)';
+  qrContainer.style.display='flex'; qrContainer.style.flexDirection='column'; qrContainer.style.justifyContent='center'; qrContainer.style.alignItems='center';
+  qrContainer.style.zIndex=10000;
+
+  const title=document.createElement('h1'); title.textContent="📱 Scannez pour jouer"; title.style.marginBottom="30px";
+  const canvas=document.createElement('canvas');
+  qrContainer.appendChild(title); qrContainer.appendChild(canvas);
+
+  const playerList=document.createElement('ul'); playerList.id='qrPlayerList';
+  playerList.style.marginTop='20px'; playerList.style.color='white'; playerList.style.fontSize='1.5rem'; playerList.style.listStyle='none';
+  qrContainer.appendChild(playerList);
+
+  document.body.appendChild(qrContainer);
+
+  QRCode.toCanvas(canvas, url, { width: 350 }, function(error){ if(error) console.error(error); });
+
+  qrContainer.addEventListener('click', ()=>{ hideQR(); });
+});
+
+socket.on('playerJoined', (playerName)=>{
+  const list=document.getElementById('qrPlayerList'); if(list){ const li=document.createElement('li'); li.textContent=playerName; list.appendChild(li); }
+});
+</script>
+</body>
+</html>

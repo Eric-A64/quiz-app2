@@ -1,0 +1,209 @@
+{
+  "2000-Musique2": [
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/intro-2000.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "yellow-buzz.mp4"
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/apesenteur.mp4",
+      "answer": "CALOGERO - EN APESENTEUR",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/apesenteur2.mp3",
+        "image": "2000-Musique2/img/apesenteur.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/mika.mp4",
+      "answer": "MIKA - RELAX",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/mika2.mp3",
+        "image": "2000-Musique2/img/mika.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/ladygaga.mp4",
+      "answer": "LADY GAGA - BAD ROMANCE",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/ladygaga2.mp3",
+        "image": "2000-Musique2/img/ladygaga.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/newyork.mp4",
+      "answer": "JAY-Z - ALICIA KEYS - EMPIRE STATE OF MIND",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/newyork2.mp3",
+        "image": "2000-Musique2/img/newyork.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/rihanna.mp4",
+      "answer": "RIHANNA - DIAMONDS",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/rihanna2.mp3",
+        "image": "2000-Musique2/img/rihanna.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/kyo.mp4",
+      "answer": "KYO - DERNIERE DANSE",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/kyo2.mp3",
+        "image": "2000-Musique2/img/kyo.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "2000-Musique2/audio/lavillier.mp3",
+      "mediaImage": "2000-Musique2/img/q7.gif",
+      "answer": "LAVILLIER",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/lavillier2.mp3",
+        "image": "2000-Musique2/img/lavillier.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/cali.mp4",
+      "answer": "CALI - ELLE M'A DIT",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/cali2.mp3",
+        "image": "2000-Musique2/img/cali.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/anais.mp4",
+      "answer": "ANAÏS - MON COEUR, MON AMOUR",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/anais2.mp3",
+        "image": "2000-Musique2/img/anais.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/tragedie.mp4",
+      "answer": "TRAGEDIE - HEY OH",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/tragedie2.mp3",
+        "image": "2000-Musique2/img/tragedie.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/beyonce.mp4",
+      "answer": "BEYONCE - DANGEROUSLY IN LOVE",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/beyonce2.mp3",
+        "image": "2000-Musique2/img/beyonce.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/britney.mp4",
+      "answer": "BRITNEY SPEARS - WOMANISER",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/britney2.mp3",
+        "image": "2000-Musique2/img/britney.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/estelle.mp4",
+      "answer": "ESTELLE - AMERICAN BOY",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/estelle2.mp3",
+        "image": "2000-Musique2/img/estelle.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/ketchup.mp4",
+      "answer": "LAS KETCHUP - ASEREJE",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/ketchup2.mp3",
+        "image": "2000-Musique2/img/ketchup.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/duffy.mp4",
+      "answer": "DUFFY - MERCY",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/duffy2.mp3",
+        "image": "2000-Musique2/img/duffy.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/cagoule.mp4",
+      "answer": "FATAL BAZOUKA - FOUT TA CAGOULE",
+      "mediaAnswer2": "2000-Musique2/video/cagoule2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/shakaponk.mp4",
+      "answer": "SHAKA PONK - MY NAME IS STAIN",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/shakaponk2.mp3",
+        "image": "2000-Musique2/img/shakaponk.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/jamiroquai.mp4",
+      "answer": "JAMIROQUAI - LOVE FOOLOSOPHY",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/jamiroquai2.mp3",
+        "image": "2000-Musique2/img/jamiroquai.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/maroon5.mp4",
+      "answer": "MAROON 5 - MOVES LIKE JAGGER",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/maroon52.mp3",
+        "image": "2000-Musique2/img/maroon5.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/bbbrune.mp4",
+      "answer": "BB BRUNE - DIS MOI",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/bbbrune2.mp3",
+        "image": "2000-Musique2/img/bbbrune.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/telo.mp4",
+      "answer": "MICHEL TELO - AI SI EU TE PEGO",
+      "mediaAnswer2": {
+        "audio": "2000-Musique2/audio/telo2.mp3",
+        "image": "2000-Musique2/img/telo.jpg"
+      }
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "2000-Musique2/video/singleladies.mp4",
+      "answer": "SINGLE LADIES - JUST DANCE",
+      "mediaAnswer2": "2000-Musique2/video/singleladies2.mp4"
+    },
+    {
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ ///////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

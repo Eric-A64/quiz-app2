@@ -1,0 +1,166 @@
+{
+  "4-ROCK-Music": [
+{
+      "type": "video",
+      "mediaExplanation2": "4-ROCK-Music/video/intro-rock2.mp4",
+      "answer": "INTRO       //////////////////////////////////////////",
+      "mediaAnswer2": "4-ROCK-Music/video/rock-buzzer.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/nirvana.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "NIRVANA - SMELLS LIKE TEEN SPIRIT",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/nirvana2.mp3",
+        "image": "4-ROCK-Music/img/nirvana.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/blur.mp3",
+      "mediaImage": "4-ROCK-Music/q2.gif",
+      "answer": "BLUR - SONG 2",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/blur2.mp3",
+        "image": "4-ROCK-Music/img/blur.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/tostaky.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "NOIR DESIR - TOSTAKY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/tostaky2.mp3",
+        "image": "4-ROCK-Music/img/tostaky.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/twain.mp3",
+      "mediaImage": "4-ROCK-Music/q4.gif",
+      "answer": "SHANIA TWAIN - MAN! I FEEL LIKE A WOMAN",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/twain2.mp3",
+        "image": "4-ROCK-Music/img/twain.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/offspring.mp3",
+      "mediaImage": "4-ROCK-Music/q5.gif",
+      "answer": "THE OFFSPRING - PRETTY FLY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/offspring2.mp3",
+        "image": "4-ROCK-Music/img/offspring.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/franz.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "FRANZ FERDINAND - TAKE ME OUT",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/franz2.mp3",
+        "image": "4-ROCK-Music/img/franz.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/white.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "THE WHITE STRIPES - SEVEN NATION ARMY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/white2.mp3",
+        "image": "4-ROCK-Music/img/white.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/gossip.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "GOSSIP - HEAVY CROSS",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/gossip2.mp3",
+        "image": "4-ROCK-Music/img/gossip.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/muse.mp3",
+      "mediaImage": "4-ROCK-Music/q2.gif",
+      "answer": "MUSE - UPRISING",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/muse2.mp3",
+        "image": "4-ROCK-Music/img/muse.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/greenday.mp3",
+      "mediaImage": "4-ROCK-Music/q3.gif",
+      "answer": "GREENDAY - BOULEVARD OF BROKEN DREAMS",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/greenday2.mp3",
+        "image": "4-ROCK-Music/img/greenday.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/mano.mp3",
+      "mediaImage": "4-ROCK-Music/q4.gif",
+      "answer": "MANO NEGRA - MALA VIDA",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/mano2.mp3",
+        "image": "4-ROCK-Music/img/mano.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/hives.mp3",
+      "mediaImage": "4-ROCK-Music/q5.gif",
+      "answer": "THE HIVES - TICK TICK BOOM",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/hives.mp3",
+        "image": "4-ROCK-Music/img/hives.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/blink.mp3",
+      "mediaImage": "4-ROCK-Music/q6.jpg",
+      "answer": "BLINK 182 - EVERY TIME I LOOK FOR YOU",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/blink2.mp3",
+        "image": "4-ROCK-Music/img/blink.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/redhot.mp3",
+      "mediaImage": "4-ROCK-Music/q3.jpg",
+      "answer": "RED HOT CHILI PEPPERS - CAN'T STOP",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/redhot2.mp3",
+        "image": "4-ROCK-Music/img/redhot.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "4-ROCK-Music/audio/kravitz.mp3",
+      "mediaImage": "4-ROCK-Music/q1.gif",
+      "answer": "LENNY KRAVITZ - ARE YOU GONNA GO MY WAY",
+      "mediaAnswer2": {
+        "audio": "4-ROCK-Music/audio/kravitz2.mp3",
+        "image": "4-ROCK-Music/img/kravitz.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FINAL",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interface Admin - Quiz interactif</title>
+  <style>
+body { font-family: Arial, sans-serif; margin: 20px; max-width: 900px; }
+video, img { max-width: 300px; display: block; margin-top: 5px; margin-bottom: 10px; }
+button, select { margin-top: 5px; margin-bottom: 15px; cursor: pointer; padding: 5px 10px; border-radius: 6px; }
+#qrcode { margin-top: 10px; border: 1px solid #ccc; width: 180px; height: 180px; }
+
+
+#qrcode canvas,
+#qrcode svg {
+  width: 180px !important;
+  height: 180px !important;
+  display: block;
+}
+
+
+
+
+
+
+#scoreboard { margin-top: 30px; padding: 10px; border: 2px solid #007BFF; border-radius: 8px; background-color: #f0f8ff; }
+#scoreboard table { width: 100%; border-collapse: collapse; }
+#scoreboard th, #scoreboard td { border: 1px solid #007BFF; padding: 8px; text-align: left; }
+#scoreboard th { background-color: #007BFF; color: white; }
+
+#mainContainer { display: flex; gap: 20px; align-items: flex-start; }
+#questionsContainer { flex: 2; }
+
+/* Section score flottante */
+    #scoreContainer {
+      background-color: #7EDEFC;
+      border-radius: 20px;
+      max-width: 400px;
+
+      position: fixed;  /* flottante */
+      top: 10px;        /* distance du haut */
+      right: 20px;      /* distance de la droite */
+      width: 400px;     /* largeur fixe pour rester cohérente */
+      z-index: 1000;    /* pour qu’elle reste au-dessus du contenu */
+    }
+
+
+#scoreboard table {
+  font-size: 20px; /* augmente toute la table */
+}
+
+#scoreboard th {
+  font-size: 20px; /* titres */
+}
+
+#scoreboard td {
+  font-size: 20px; /* noms + scores */
+}
+
+
+
+#podiumContainer { margin-top: 20px; }
+.text-center { text-align: center; }
+
+#headerRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;               /* réduit l’espace entre les lignes */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7EDEFC;
+  color: white;
+  padding: 5px 20px;      /* padding vertical réduit à 5px pour affiner la barre */
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+#headerRow > * {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.question-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Générateur stylé bouton */
+#generatorLinkDiv a {
+  background-color: #f59e0b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+#generatorLinkDiv a:hover {
+  background-color: #d97706;
+}
+
+/* ===================== Responsive smartphone ===================== */
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+    font-size: 0.9rem;
+  }
+
+  #mainContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #scoreContainer {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    top: 10px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #questionsContainer {
+    width: 100%;
+  }
+
+  video, img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #generatorLinkDiv a {
+    width: 100%;
+    text-align: center;
+  }
+
+  #qrcode {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<div id="headerRow">
+<div id="logoContainer">
+  <img src="Mis-ROND90.png" alt="Logo" />
+</div>
+
+  <h2>ADMIN</h2>
+  <div id="loadQuizDiv">
+    <label for="quizSelect" style="margin:0;">QUIZ</label>
+    <select id="quizSelect"></select>
+    <button id="loadQuiz" style="background-color:#AFFF03; color:black;">LOAD</button>
+  </div>
+
+  <div id="qrButtonDiv">
+    <button style="background-color:#2563eb; color:white;">QR CODE + WAITING ROOM OFF</button>
+  </div>
+
+  <div id="generatorLinkDiv">
+    <a href="/GENERATOR.html" target="_blank" rel="noopener noreferrer">GENERATOR</a>
+  </div>
+</div>
+
+<hr/>
+
+<div id="mainContainer">
+  <div id="questionsContainer">
+    <h2>QUESTIONS</h2>
+    <div id="questionList"></div>
+    <hr/>
+    <center>
+      <div id="podiumButtonDiv">
+        <button id="endQuizBtn" 
+  style="
+    background-color:#f44336; 
+    color:white; 
+    border-radius:50%; 
+    width:80px; 
+    height:80px;
+    border:none;
+  ">
+  🏆PODIUM
+</button>
+      </div>
+      <h3>URL pour les joueurs :</h3>
+      <p id="playerURL"></p>
+      <div id="qrcode"></div>
+    </center>
+  </div>
+
+  <div id="scoreContainer">
+    <h2><center>CLASSEMENT</center></h2>
+<center>
+<div id="scoreScreenButtonDiv">
+  <center><button id="scoreScreenBtn" style="background-color:#2563eb; color:white;">TOP LIST</button>
+</center></div>
+<div><center>
+  👥 <b>Connectés</b> : <span id="playerCount">0</span>
+</div></center>
+      <center><button id="resetScoresBtn" style="background-color:#FF2900; color:white;">🔄 <b>RESET SCORES</b></button>
+    </center>
+
+    <div id="scoreboard">
+      <p><center>Score en attente</p>
+    </div>
+
+
+    
+    <hr/>
+    <div id="podiumContainer">
+      <h2><center>🏆 Podium Final</center></h2>
+      <div id="podium" style="font-size:1.2rem; font-weight:bold; color:#b8860b;">
+        <p><center>Podium en attente</center></p>
+      </div>
+    </div>
+    <hr/>
+  </div>
+
+
+</div>
+<script src="/libs/qrcode.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+
+<script>
+let scoreScreenVisible = false;
+
+let socket;
+let qrScreenVisible = false;
+let playerUrl = '';
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  socket = io();
+
+function renderQR(url) {
+  const container = document.getElementById("qrcode");
+  container.innerHTML = "";
+
+  new QRCode(container, {
+    text: url,
+    width: 180,
+    height: 180,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  console.log("QR généré :", url);
+}
+
+
+
+socket.on('showQRCodeOnScreen', (url) => {
+  renderQR(url);
+});
+
+socket.on('hideQRCode', () => {
+  document.getElementById("qrcode").innerHTML = "";
+});
+
+
+  
+
+  socket.on('connect', () => {
+    console.log('Admin connecté, id:', socket.id);
+    alert('Connecté au serveur, ID: ' + socket.id);
+  });
+
+  const quizSelect = document.getElementById('quizSelect');
+  const loadQuizBtn = document.getElementById('loadQuiz');
+  const questionList = document.getElementById('questionList');
+  const scoreboard = document.getElementById('scoreboard');
+  const endQuizBtn = document.getElementById('endQuizBtn');
+  const resetScoresBtn = document.getElementById('resetScoresBtn');
+  const podiumDiv = document.getElementById('podium');
+  const qrButton = document.querySelector('#qrButtonDiv button');
+  const scoreScreenBtn = document.getElementById('scoreScreenBtn');
+  const playerCounter = document.getElementById('playerCount');
+
+  fetch('/api/quizzes')
+    .then(res => res.json())
+    .then(files => {
+      files.forEach(file => {
+        const opt = document.createElement('option');
+        opt.value = file;
+        opt.textContent = file;
+        quizSelect.appendChild(opt);
+      });
+    })
+    .catch(e => alert('Erreur chargement quiz: ' + e));
+
+  loadQuizBtn.addEventListener('click', () => {
+    const file = quizSelect.value;
+    if (!file) {
+      alert('Choisissez un fichier de quiz avant de charger.');
+      return;
+    }
+
+    fetch(`/api/quiz/${file}`)
+      .then(res => res.json())
+      .then(data => {
+        questionList.innerHTML = '';
+        const questionsArray = Object.values(data)[0];
+        window.loadedQuestions = questionsArray;
+
+        questionsArray.forEach((q, i) => {
+          const div = document.createElement('div');
+          div.style.borderBottom = '1px solid #ccc';
+          div.style.paddingBottom = '15px';
+          div.style.marginBottom = '15px';
+
+          let html = `<p><strong>Q${i + 1} :</strong> ${q.question}</p>`;
+          html += '<ol>';
+          q.options.forEach(o => { html += `<li>${o}</li>`; });
+          html += '</ol>';
+
+          if (q.image) html += `<img src="${q.image}" alt="Image question ${i+1}" />`;
+          if (q.video) html += `<video controls src="${q.video}"></video>`;
+
+          html += `
+            <div class="question-actions">
+              <button onclick="sendQuestion(${i})" style="background-color:#ff6c00; color:white;">QUESTION PLAYER</button>
+              <button onclick="validateAnswer(${i})" style="background-color:#AFFF03; color:black;">BONNE REPONSE</button>
+              <button onclick="sendMediaExplanation(${i})" style="background-color:#2563eb; color:white;">MEDIA SCREEN</button>
+            </div>
+          `;
+
+          div.innerHTML = html;
+          questionList.appendChild(div);
+        });
+      })
+      .catch(e => alert('Erreur chargement questions: ' + e));
+  });
+
+  qrButton.addEventListener('click', () => {
+  
+  if (!qrScreenVisible) {
+    socket.emit('showQRCodeOnScreen', playerUrl);
+    qrButton.textContent = 'QR CODE + WAITING ROOM  ON';
+    qrButton.style.backgroundColor = '#78F07E';
+    qrScreenVisible = true;
+  } else {
+    socket.emit('hideQRCode'); // 👈 AJOUT ICI (IMPORTANT)
+    qrButton.textContent = 'QR CODE + WAITING ROOM OFF';
+    qrButton.style.backgroundColor = '#2563eb';
+    qrScreenVisible = false;
+  }
+});
+
+  scoreScreenBtn.addEventListener('click', () => {
+    if (!scoreScreenVisible) {
+      const scores = window.latestScores || {};
+      socket.emit('showScoreScreen', scores);
+      scoreScreenBtn.textContent = 'TOP LIST';
+      scoreScreenBtn.style.backgroundColor = '#78F07E';
+      scoreScreenVisible = true;
+    } else {
+      socket.emit('hideScoreScreen');
+      scoreScreenBtn.textContent = 'TOP LIST';
+      scoreScreenBtn.style.backgroundColor = '#2563eb';
+      scoreScreenVisible = false;
+    }
+  });
+
+  resetScoresBtn.addEventListener('click', () => {
+    const ok = confirm('Voulez-vous vraiment remettre tous les scores à zéro ?');
+    if (!ok) return;
+    socket.emit('resetScores');
+  });
+
+
+
+
+  window.sendQuestion = function(index) {
+    if (!window.loadedQuestions) { alert('Aucune question chargée.'); return; }
+    const question = window.loadedQuestions[index];
+    socket.emit('addQuestion', question);
+  }
+
+  window.validateAnswer = function(index) {
+    if (!window.loadedQuestions) return;
+    const question = window.loadedQuestions[index];
+    const correctAnswer = question.answer;
+    const correctIndex = question.options.indexOf(correctAnswer);
+    if (correctIndex === -1) return;
+    socket.emit('showCorrectAnswer', correctIndex);
+  }
+
+  window.sendMediaExplanation = function(index) {
+    if (!window.loadedQuestions) return;
+    const question = window.loadedQuestions[index];
+    if (!question.mediaExplanation) return;
+    socket.emit('showMediaExplanation', question.mediaExplanation);
+  }
+
+  const localIP = '192.168.0.185';
+const port = window.location.port;
+playerUrl = `http://${localIP}${port ? ':' + port : ''}/player.html`;
+
+document.getElementById('playerURL').textContent = playerUrl;
+renderQR(playerUrl);
+
+  
+
+socket.on('updateWaitingRoom', (players) => {
+  if (playerCounter) {
+    playerCounter.textContent = Array.isArray(players) ? players.length : 0;
+  }
+});
+
+
+  socket.on('updateScores', (scores) => {
+
+  window.latestScores = scores;
+
+  if (!scores || Object.keys(scores).length === 0) {
+    scoreboard.innerHTML = '<p>Aucun score pour le moment.</p>';
+    return;
+  }
+
+  const sorted = Object.entries(scores)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 10); // TOP 10
+
+const table = document.createElement('table');
+const thead = document.createElement('thead');
+const tbody = document.createElement('tbody');
+
+const headerRow = document.createElement('tr');
+headerRow.innerHTML = `<th>🏆</th><th>JOUEURS</th><th>SCORES</th>`;
+thead.appendChild(headerRow);
+
+// 👇 AJOUT DU INDEX
+sorted.forEach(([player, score], index) => {
+  const row = document.createElement('tr');
+  row.innerHTML = `<td>${index + 1}</td><td>${player}</td><td>${score}</td>`;
+  tbody.appendChild(row);
+});
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+scoreboard.innerHTML = '';
+scoreboard.appendChild(table);
+});
+
+
+
+
+
+  endQuizBtn.addEventListener('click', () => { socket.emit('endQuiz'); 
+});
+
+  socket.on('showPodium', (podium) => {
+    if (!podium || podium.length === 0) {
+      podiumDiv.innerHTML = '<p>Aucun podium pour le moment.</p>';
+      return;
+    }
+    let html = '<ol>';
+    podium.forEach(({playerName, score}) => {
+      html += `<li>${playerName} - ${score} pt${score > 1 ? 's' : ''}</li>`;
+    });
+    html += '</ol>';
+    podiumDiv.innerHTML = html;
+  });
+
+socket.on('clearMediaExplanation', () => {
+  const old = document.getElementById('qrOverlay');
+  if (old) old.remove();
+});
+  socket.on('scoresReset', () => {
+    scoreboard.innerHTML = '<p><center>Scores remis à zéro</center></p>';
+    podiumDiv.innerHTML = '<p><center>Podium en attente</center></p>';
+    window.latestScores = {};
+  });
+});
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

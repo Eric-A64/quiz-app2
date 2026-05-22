@@ -1,0 +1,198 @@
+{
+  "A-Serie-TV": [
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/magnum.mp4",
+      "answer": "MAGNUM",
+      "mediaAnswer2": "A-Serie-TV/video/magnum2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/fame.mp4",
+      "answer": "FAME",
+      "mediaAnswer2": "A-Serie-TV/video/fame2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/autobus.mp4",
+      "answer": "L'AUTOBUS A IMPERIALE",
+      "mediaAnswer2": "A-Serie-TV/video/autobus2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/adams.mp4",
+      "answer": "LA FAMILLE ADDAMS",
+      "mediaAnswer2": "A-Serie-TV/video/adams2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/happydays.mp4",
+      "answer": "LES JOURS HEUREUX - HAPPY DAYS",
+      "mediaAnswer2": "A-Serie-TV/video/happydays2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/tetesbrulees.mp4",
+      "answer": "LES TÊTES BRULEES",
+      "mediaAnswer2": "A-Serie-TV/video/tetesbrulees2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/troismilliards2.mp4",
+      "answer": "L'HOMME QUI VALAIT TROIS MILLIARDS",
+      "mediaAnswer2": "A-Serie-TV/video/troismilliards2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/miami.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "DEUX FLICS A MIAMI",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/miami2.mp3",
+        "image": "A-Serie-TV/img/miami2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/lupin.mp3",
+      "mediaImage": "A-SEXY-quiz/q11.gif",
+      "answer": "ARSENE LUPIN",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/lupin2.mp3",
+        "image": "A-Serie-TV/img/lupin2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/sorciere.mp4",
+      "answer": "MA SORCIERE BIEN AIMEE",
+      "mediaAnswer2": "A-Serie-TV/video/sorciere2.mp4"
+    },{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/croisiere.mp3",
+      "mediaImage": "A-SEXY-quiz/q0.gif",
+      "answer": "LA CROISIERE S'AMUSE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/croisiere2.mp3",
+        "image": "A-Serie-TV/img/croisiere2.jpg"
+      }
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/madame.mp3",
+      "mediaImage": "A-SEXY-quiz/q6.gif",
+      "answer": "MADAME EST SERVIE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/madame2.mp3",
+        "image": "A-Serie-TV/img/madame2.jpg"
+        }
+      },
+
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/prairie.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "LA PETITE MAISON DANS LA PRAIRIE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/prairie2.mp3",
+        "image": "A-Serie-TV/img/prairie2.jpg"
+      }
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/amicalement.mp4",
+      "answer": "AMICALEMENT VOTRE",
+      "mediaAnswer2": "A-Serie-TV/video/amicalement2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/mission.mp4",
+      "answer": "MISSION IMPOSSIBLE",
+      "mediaAnswer2": "A-Serie-TV/video/mission2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/starsky.mp4",
+      "answer": "STARSKY ET HUTCH",
+      "mediaAnswer2": "A-Serie-TV/video/starsky2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/helene.mp4",
+      "answer": "HELENE ET LES GARCONS",
+      "mediaAnswer2": "A-Serie-TV/video/helene.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/agence.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "L'AGENCE TOUT RISQUE",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/agence2.mp3",
+        "image": "A-Serie-TV/img/agence2.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/mysteres.mp4",
+      "answer": "LES MYSTERES DE L'OUEST",
+      "mediaAnswer2": "A-Serie-TV/video/mysteres2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/macgyver.mp4",
+      "answer": "MAC GYVER",
+      "mediaAnswer2": "A-Serie-TV/video/macgyver2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/mannix.mp4",
+      "answer": "MANNIX",
+      "mediaAnswer2": "A-Serie-TV/video/mannix2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/benny.mp4",
+      "answer": "BENNY HILL",
+      "mediaAnswer2": "A-Serie-TV/video/benny2.mp4"
+    },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/chapeau.mp4",
+      "answer": "CHAPEAU MELON ET BOTTES DE CUIR",
+      "mediaAnswer2": "A-Serie-TV/video/chapeau2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/dames.mp3",
+      "mediaImage": "A-SEXY-quiz/q7.gif",
+      "answer": "DROLES DE DAMES",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/drolesdedames2.mp3",
+        "image": "A-Serie-TV/img/drolesdedames2.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "A-Serie-TV/video/cosmos.mp4",
+      "answer": "COSMOS 1999",
+      "mediaAnswer2": "A-Serie-TV/video/cosmos2.mp4"
+    },
+{
+      "type": "audio",
+      "mediaExplanation2": "A-Serie-TV/audio/dallas.mp3",
+      "mediaImage": "A-SEXY-quiz/q8.gif",
+      "answer": "DALLAS",
+      "mediaAnswer2": {
+        "audio": "A-Serie-TV/audio/dallas2.mp3",
+        "image": "A-Serie-TV/img/dallas2.jpg"
+        }
+      },
+{
+      "type": "video",
+      "mediaExplanation2": "80/video/60-80-merci.mp4",
+      "answer": "FIN DU QUIZZ //////////////////",
+      "mediaAnswer2": "80/video/60-80-merci.mp4"
+    }
+  ]
+}
