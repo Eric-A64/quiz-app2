@@ -1,5 +1,6 @@
 node_modules/
 *.log
+<<<<<<< HEAD
 
 public/media/
 public/audio/
@@ -14,3 +15,6 @@ public/Z-GIF/
 *.jpeg
 *.gif
 *.webp
+=======
+lobby.json
+>>>>>>> 86cd1c667eaca2fe2dad3c0af9a602892ff1349b

@@ -6,9 +6,16 @@
     "start": "node server.js",
     "screen": "electron main.js"
   },
+<<<<<<< HEAD
   "engines": {
     "node": ">=18"
   },
+=======
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+>>>>>>> 86cd1c667eaca2fe2dad3c0af9a602892ff1349b
   "dependencies": {
     "canvas-confetti": "^1.9.3",
     "express": "^5.1.0",
@@ -18,4 +25,8 @@
   "devDependencies": {
     "electron": "^41.2.1"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 86cd1c667eaca2fe2dad3c0af9a602892ff1349b
