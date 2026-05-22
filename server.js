@@ -15,10 +15,9 @@ const PORT = process.env.PORT || 3000;
 // STATIC FILES
 // ============================
 
-app.use(express.static(path.join(process.cwd(), "public")));
-app.use('/audio', express.static(path.join(__dirname, 'audio')));
-app.use('/media', express.static(path.join(__dirname, 'public/media')));
-app.use('/buzzer', express.static(path.join(__dirname, 'public/buzzer')));
+const publicPath = path.join(__dirname, "public");
+
+app.use(express.static(publicPath));
 
 // ============================
 // INDEX
