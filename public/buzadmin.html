@@ -849,7 +849,7 @@ socket.onAny((event, data) => {
 
 
     socket.on('buzzQuestionsList', (data) => {
-
+    console.log("🔥 EVENT buzzQuestionsList RECEIVED", data);
     loadedQuestions = Array.isArray(data) ? data : [];
 
     const loadBtn = document.getElementById("loadSelectedQuiz");

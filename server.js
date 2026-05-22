@@ -161,6 +161,8 @@ io.on('connection', (socket) => {
         socket.emit('showQRCodeOnScreen', qrState.url);
     }
 
+
+
     // ============================
     // PLAYER
     // ============================
@@ -213,6 +215,20 @@ io.on('connection', (socket) => {
         io.emit('newBuzzQuestion', currentBuzzQuestion);
         io.emit('resetBuzz');
     });
+
+socket.on('getBuzzQuestions', () => {
+
+    console.log("📥 getBuzzQuestions reçu");
+
+    if (!allBuzzData || allBuzzData.length === 0) {
+        console.log("⚠️ allBuzzData vide");
+        return;
+    }
+
+    socket.emit('buzzQuestionsList', allBuzzData);
+
+    console.log("📤 buzzQuestionsList envoyé");
+});
 
     socket.on('playerBuzz', (name) => {
         if (!name) return;
